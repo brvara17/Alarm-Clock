@@ -20,4 +20,49 @@ namespace PA5_Gelyana_Vara
         }
         
     }
+
+
+
+    public class Appointment
+    {
+        public DateTime myDateTime;
+        public string apptNotes;
+        public int reminder;
+        public DateTime reminderDateTime;
+
+        public void SetAppointment(DateTime date, string notes)
+        {
+            myDateTime = date;
+            apptNotes = notes;
+        }
+
+        public DateTime GetDateTime
+        {
+            get { return myDateTime; }
+            set { myDateTime = value; }
+        }
+
+        public override string ToString()
+        {
+            string printview;
+
+            if (apptNotes == "" || apptNotes == "Enter Appointment Notes")
+            {
+                printview = myDateTime.ToString();
+            }
+            else
+            {
+                printview = myDateTime.ToString() + "\n" + "Appointment Notes:\n" + apptNotes;
+            }
+
+            if (reminder == 1)
+            {
+                printview += "\nReminder on:\n" + reminderDateTime.ToString();
+            }
+
+            return printview;
+        }
+    }
+
+
 }

@@ -2,7 +2,6 @@ c:\users\manny\documents\visual studio 2015\Projects\PA5_Gelyana_Vara\PA5_Gelyan
 c:\users\manny\documents\visual studio 2015\Projects\PA5_Gelyana_Vara\PA5_Gelyana_Vara\bin\Debug\PA5_Gelyana_Vara.exe
 c:\users\manny\documents\visual studio 2015\Projects\PA5_Gelyana_Vara\PA5_Gelyana_Vara\bin\Debug\PA5_Gelyana_Vara.pdb
 c:\users\manny\documents\visual studio 2015\Projects\PA5_Gelyana_Vara\PA5_Gelyana_Vara\obj\Debug\PA5_Gelyana_Vara.csprojResolveAssemblyReference.cache
-c:\users\manny\documents\visual studio 2015\Projects\PA5_Gelyana_Vara\PA5_Gelyana_Vara\obj\Debug\PA5_Gelyana_Vara.Form1.resources
 c:\users\manny\documents\visual studio 2015\Projects\PA5_Gelyana_Vara\PA5_Gelyana_Vara\obj\Debug\PA5_Gelyana_Vara.Properties.Resources.resources
 c:\users\manny\documents\visual studio 2015\Projects\PA5_Gelyana_Vara\PA5_Gelyana_Vara\obj\Debug\PA5_Gelyana_Vara.csproj.GenerateResource.Cache
 c:\users\manny\documents\visual studio 2015\Projects\PA5_Gelyana_Vara\PA5_Gelyana_Vara\obj\Debug\PA5_Gelyana_Vara.exe
@@ -10,3 +9,5 @@ c:\users\manny\documents\visual studio 2015\Projects\PA5_Gelyana_Vara\PA5_Gelyan
 C:\Users\Manny\documents\visual studio 2015\Projects\PA5_Gelyana_Vara\PA5_Gelyana_Vara\obj\Debug\PA5_Gelyana_Vara.Main.resources
 C:\Users\Manny\documents\visual studio 2015\Projects\PA5_Gelyana_Vara\PA5_Gelyana_Vara\obj\Debug\Interop.WMPLib.dll
 C:\Users\Manny\documents\visual studio 2015\Projects\PA5_Gelyana_Vara\PA5_Gelyana_Vara\obj\Debug\PA5_Gelyana_Vara.csproj.ResolveComReference.cache
+C:\Users\Manny\documents\visual studio 2015\Projects\PA5_Gelyana_Vara\PA5_Gelyana_Vara\obj\Debug\PA5_Gelyana_Vara.Appointment_Book.resources
+C:\Users\Manny\documents\visual studio 2015\Projects\PA5_Gelyana_Vara\PA5_Gelyana_Vara\obj\Debug\PA5_Gelyana_Vara.Form2.resources

@@ -63,8 +63,8 @@ namespace PA5_Gelyana_Vara
     
         private void alarmBtn_Click(object sender, EventArgs e)
         {
-            Form1 frm1 = new Form1();
-            frm1.Show();
+            Form2 frm2 = new Form2();
+            frm2.Show();
         }
         private void stopBtn_Click(object sender, EventArgs e)
         {
@@ -74,7 +74,7 @@ namespace PA5_Gelyana_Vara
 
         private void button3_Click(object sender, EventArgs e)
         {
-            // snooze
+            
         }
     }
 }
