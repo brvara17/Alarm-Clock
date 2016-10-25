@@ -48,7 +48,7 @@ namespace PA5_Gelyana_Vara
 
         private void clockTimer_Tick(object sender, EventArgs e)
         {
-            currTimeLabel.Text = DateTime.Now.ToString("M /dd/yyyy hh:mm:ss tt");
+            currTimeLabel.Text = DateTime.Now.ToString("M/dd/yyyy hh:mm:ss tt");
             currTime = DateTime.Now;
 
             if ((currTime.Hour == alarmHour) && (currTime.Minute == alarmMin) && (currTime.Second == alarmSec)
@@ -61,7 +61,7 @@ namespace PA5_Gelyana_Vara
             foreach(Appointment apt in Appointment_Book.appointment_Book)
             {
                 
-                    if(DateTime.Now == apt.reminderDateTime)
+                    if(DateTime.Now.ToString("M/dd/yyyy hh:mm:ss tt") == apt.reminderDateTime.ToString())
                     {
                         alarmSound.Play();
                         MessageBox.Show(apt.ToString());
