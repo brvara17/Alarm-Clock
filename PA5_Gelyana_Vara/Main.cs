@@ -76,5 +76,11 @@ namespace PA5_Gelyana_Vara
         {
             
         }
+
+        private void btn_AppointmentBook_Click(object sender, EventArgs e)
+        {
+            Appointment_Book form1 = new Appointment_Book();
+            form1.Show();
+        }
     }
 }

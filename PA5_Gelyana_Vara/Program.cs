@@ -18,7 +18,7 @@ namespace PA5_Gelyana_Vara
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Main());
         }
-        
+
     }
 
 
@@ -27,7 +27,7 @@ namespace PA5_Gelyana_Vara
     {
         public DateTime myDateTime;
         public string apptNotes;
-        public int reminder;
+        public bool reminder = false;
         public DateTime reminderDateTime;
 
         public void SetAppointment(DateTime date, string notes)
@@ -55,14 +55,27 @@ namespace PA5_Gelyana_Vara
                 printview = myDateTime.ToString() + "\n" + "Appointment Notes:\n" + apptNotes;
             }
 
-            if (reminder == 1)
+            if (reminder)
             {
-                printview += "\nReminder on:\n" + reminderDateTime.ToString();
+                printview += "\n\nReminder on:\n" + reminderDateTime.ToString();
             }
 
             return printview;
         }
     }
+
+    public class Variables
+    {
+        public static int appointmentSelected;
+
+        public void CleanUpDelete()
+        {
+
+        }
+    }
+
+    
+
 
 
 }

@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{B310B3B7-DDB5-4128-9903-12B4769A615C}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>PA5_Gelyana_Vara</RootNamespace>
     <AssemblyName>PA5_Gelyana_Vara</AssemblyName>
@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EditorDeleteMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditorDeleteMessageBox.Designer.cs">
+      <DependentUpon>EditorDeleteMessageBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +75,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="EditorDeleteMessageBox.resx">
+      <DependentUpon>EditorDeleteMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
