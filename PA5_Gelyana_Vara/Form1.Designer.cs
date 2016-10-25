@@ -31,6 +31,7 @@
             this.dateTimePicker_DateAppt = new System.Windows.Forms.DateTimePicker();
             this.Date = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cb_Reminder = new System.Windows.Forms.CheckBox();
             this.reminderTimeLabel = new System.Windows.Forms.Label();
             this.reminderDateLabel = new System.Windows.Forms.Label();
             this.dateTimePicker_ReminderTime = new System.Windows.Forms.DateTimePicker();
@@ -40,9 +41,12 @@
             this.Notes = new System.Windows.Forms.Label();
             this.dateTimePicker_TimeAppt = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
-            this.cb_Reminder = new System.Windows.Forms.CheckBox();
             this.lb_AppointmentBook = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.btn_Edit = new System.Windows.Forms.Button();
+            this.btn_Delete = new System.Windows.Forms.Button();
+            this.btn_DoneEditing = new System.Windows.Forms.Button();
+            this.btn_DoneDelete = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,6 +76,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btn_DoneDelete);
+            this.groupBox1.Controls.Add(this.btn_DoneEditing);
             this.groupBox1.Controls.Add(this.cb_Reminder);
             this.groupBox1.Controls.Add(this.reminderTimeLabel);
             this.groupBox1.Controls.Add(this.reminderDateLabel);
@@ -85,7 +91,7 @@
             this.groupBox1.Controls.Add(this.Date);
             this.groupBox1.Controls.Add(this.dateTimePicker_DateAppt);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(8, 8);
+            this.groupBox1.Location = new System.Drawing.Point(8, 17);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -93,6 +99,18 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Set Appointment:";
+            // 
+            // cb_Reminder
+            // 
+            this.cb_Reminder.AutoSize = true;
+            this.cb_Reminder.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_Reminder.Location = new System.Drawing.Point(10, 384);
+            this.cb_Reminder.Name = "cb_Reminder";
+            this.cb_Reminder.Size = new System.Drawing.Size(142, 24);
+            this.cb_Reminder.TabIndex = 13;
+            this.cb_Reminder.Text = "Set Reminder:";
+            this.cb_Reminder.UseVisualStyleBackColor = true;
+            this.cb_Reminder.CheckedChanged += new System.EventHandler(this.cb_Reminder_CheckedChanged);
             // 
             // reminderTimeLabel
             // 
@@ -197,23 +215,11 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Time:";
             // 
-            // cb_Reminder
-            // 
-            this.cb_Reminder.AutoSize = true;
-            this.cb_Reminder.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_Reminder.Location = new System.Drawing.Point(10, 384);
-            this.cb_Reminder.Name = "cb_Reminder";
-            this.cb_Reminder.Size = new System.Drawing.Size(142, 24);
-            this.cb_Reminder.TabIndex = 13;
-            this.cb_Reminder.Text = "Set Reminder:";
-            this.cb_Reminder.UseVisualStyleBackColor = true;
-            this.cb_Reminder.CheckedChanged += new System.EventHandler(this.cb_Reminder_CheckedChanged);
-            // 
             // lb_AppointmentBook
             // 
             this.lb_AppointmentBook.FormattingEnabled = true;
             this.lb_AppointmentBook.ItemHeight = 20;
-            this.lb_AppointmentBook.Location = new System.Drawing.Point(407, 42);
+            this.lb_AppointmentBook.Location = new System.Drawing.Point(407, 55);
             this.lb_AppointmentBook.Name = "lb_AppointmentBook";
             this.lb_AppointmentBook.Size = new System.Drawing.Size(513, 464);
             this.lb_AppointmentBook.TabIndex = 4;
@@ -225,15 +231,61 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(404, 14);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(519, 25);
+            this.label2.Size = new System.Drawing.Size(138, 25);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Appointments: (Select an Appointment to \"edit\" or \"delete\")";
+            this.label2.Text = "Appointments:";
+            // 
+            // btn_Edit
+            // 
+            this.btn_Edit.Location = new System.Drawing.Point(548, 8);
+            this.btn_Edit.Name = "btn_Edit";
+            this.btn_Edit.Size = new System.Drawing.Size(80, 36);
+            this.btn_Edit.TabIndex = 6;
+            this.btn_Edit.Text = "Edit";
+            this.btn_Edit.UseVisualStyleBackColor = true;
+            this.btn_Edit.Click += new System.EventHandler(this.btn_Edit_Click);
+            // 
+            // btn_Delete
+            // 
+            this.btn_Delete.Location = new System.Drawing.Point(650, 8);
+            this.btn_Delete.Name = "btn_Delete";
+            this.btn_Delete.Size = new System.Drawing.Size(80, 36);
+            this.btn_Delete.TabIndex = 7;
+            this.btn_Delete.Text = "Delete";
+            this.btn_Delete.UseVisualStyleBackColor = true;
+            this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
+            // 
+            // btn_DoneEditing
+            // 
+            this.btn_DoneEditing.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_DoneEditing.Location = new System.Drawing.Point(7, 445);
+            this.btn_DoneEditing.Name = "btn_DoneEditing";
+            this.btn_DoneEditing.Size = new System.Drawing.Size(145, 36);
+            this.btn_DoneEditing.TabIndex = 14;
+            this.btn_DoneEditing.Text = "Done Editing";
+            this.btn_DoneEditing.UseVisualStyleBackColor = true;
+            this.btn_DoneEditing.Visible = false;
+            this.btn_DoneEditing.Click += new System.EventHandler(this.btn_DoneEditing_Click);
+            // 
+            // btn_DoneDelete
+            // 
+            this.btn_DoneDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_DoneDelete.Location = new System.Drawing.Point(7, 445);
+            this.btn_DoneDelete.Name = "btn_DoneDelete";
+            this.btn_DoneDelete.Size = new System.Drawing.Size(145, 36);
+            this.btn_DoneDelete.TabIndex = 15;
+            this.btn_DoneDelete.Text = "Delete";
+            this.btn_DoneDelete.UseVisualStyleBackColor = true;
+            this.btn_DoneDelete.Visible = false;
+            this.btn_DoneDelete.Click += new System.EventHandler(this.btn_DoneDelete_Click);
             // 
             // Appointment_Book
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(974, 557);
+            this.Controls.Add(this.btn_Delete);
+            this.Controls.Add(this.btn_Edit);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lb_AppointmentBook);
             this.Controls.Add(this.groupBox1);
@@ -264,6 +316,10 @@
         private System.Windows.Forms.CheckBox cb_Reminder;
         private System.Windows.Forms.ListBox lb_AppointmentBook;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btn_Edit;
+        private System.Windows.Forms.Button btn_Delete;
+        private System.Windows.Forms.Button btn_DoneEditing;
+        private System.Windows.Forms.Button btn_DoneDelete;
     }
 }
 
