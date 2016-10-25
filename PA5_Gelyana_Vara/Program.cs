@@ -57,7 +57,7 @@ namespace PA5_Gelyana_Vara
 
             if (reminder)
             {
-                printview += "\n\nReminder on:\n" + reminderDateTime.ToString();
+                printview += "\n\n Reminder on:\n" + reminderDateTime.ToString();
             }
 
             return printview;

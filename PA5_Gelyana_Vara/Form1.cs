@@ -167,6 +167,7 @@ namespace PA5_Gelyana_Vara
             
             if (editActive || deleteActive)
             {
+                cb_Reminder.Checked = false;
                 Appointment itemToEdit = new Appointment();
                 Variables.appointmentSelected = lb_AppointmentBook.SelectedIndex;
                 itemToEdit = appointment_Book.ElementAt(Variables.appointmentSelected);
@@ -205,6 +206,7 @@ namespace PA5_Gelyana_Vara
             editActive = true;
             btn_DoneEditing.Visible = true;
             addApt.Visible = false;
+            cb_Reminder.Checked = false;
 
         }
 
@@ -277,6 +279,7 @@ namespace PA5_Gelyana_Vara
             deleteActive = true;
             btn_DoneDelete.Visible = true;
             addApt.Visible = false;
+            cb_Reminder.Checked = false;
         }
 
         private void btn_DoneDelete_Click(object sender, EventArgs e)
