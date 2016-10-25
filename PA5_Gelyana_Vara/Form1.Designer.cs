@@ -35,12 +35,14 @@
             this.reminderDateLabel = new System.Windows.Forms.Label();
             this.dateTimePicker_ReminderTime = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker_ReminderDate = new System.Windows.Forms.DateTimePicker();
-            this.rb_Reminder = new System.Windows.Forms.RadioButton();
             this.addApt = new System.Windows.Forms.Button();
             this.rtb_ApptNotes = new System.Windows.Forms.RichTextBox();
             this.Notes = new System.Windows.Forms.Label();
             this.dateTimePicker_TimeAppt = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
+            this.cb_Reminder = new System.Windows.Forms.CheckBox();
+            this.lb_AppointmentBook = new System.Windows.Forms.ListBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,11 +72,11 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cb_Reminder);
             this.groupBox1.Controls.Add(this.reminderTimeLabel);
             this.groupBox1.Controls.Add(this.reminderDateLabel);
             this.groupBox1.Controls.Add(this.dateTimePicker_ReminderTime);
             this.groupBox1.Controls.Add(this.dateTimePicker_ReminderDate);
-            this.groupBox1.Controls.Add(this.rb_Reminder);
             this.groupBox1.Controls.Add(this.addApt);
             this.groupBox1.Controls.Add(this.rtb_ApptNotes);
             this.groupBox1.Controls.Add(this.Notes);
@@ -90,7 +92,7 @@
             this.groupBox1.Size = new System.Drawing.Size(337, 498);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Set New Appointment:";
+            this.groupBox1.Text = "Set Appointment:";
             // 
             // reminderTimeLabel
             // 
@@ -123,6 +125,7 @@
             this.dateTimePicker_ReminderTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.dateTimePicker_ReminderTime.Location = new System.Drawing.Point(166, 456);
             this.dateTimePicker_ReminderTime.Name = "dateTimePicker_ReminderTime";
+            this.dateTimePicker_ReminderTime.ShowUpDown = true;
             this.dateTimePicker_ReminderTime.Size = new System.Drawing.Size(146, 26);
             this.dateTimePicker_ReminderTime.TabIndex = 10;
             this.dateTimePicker_ReminderTime.Visible = false;
@@ -137,19 +140,6 @@
             this.dateTimePicker_ReminderDate.Size = new System.Drawing.Size(146, 26);
             this.dateTimePicker_ReminderDate.TabIndex = 9;
             this.dateTimePicker_ReminderDate.Visible = false;
-            // 
-            // rb_Reminder
-            // 
-            this.rb_Reminder.AutoSize = true;
-            this.rb_Reminder.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rb_Reminder.Location = new System.Drawing.Point(10, 383);
-            this.rb_Reminder.Name = "rb_Reminder";
-            this.rb_Reminder.Size = new System.Drawing.Size(136, 24);
-            this.rb_Reminder.TabIndex = 8;
-            this.rb_Reminder.TabStop = true;
-            this.rb_Reminder.Text = "Set Reminder";
-            this.rb_Reminder.UseVisualStyleBackColor = true;
-            this.rb_Reminder.Click += new System.EventHandler(this.rb_Reminder_CheckedChanged);
             // 
             // addApt
             // 
@@ -171,6 +161,7 @@
             this.rtb_ApptNotes.Size = new System.Drawing.Size(304, 144);
             this.rtb_ApptNotes.TabIndex = 4;
             this.rtb_ApptNotes.Text = "Enter Appointment Notes";
+            this.rtb_ApptNotes.Click += new System.EventHandler(this.rtb_ApptNotes_Click);
             // 
             // Notes
             // 
@@ -191,6 +182,7 @@
             this.dateTimePicker_TimeAppt.Location = new System.Drawing.Point(10, 152);
             this.dateTimePicker_TimeAppt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dateTimePicker_TimeAppt.Name = "dateTimePicker_TimeAppt";
+            this.dateTimePicker_TimeAppt.ShowUpDown = true;
             this.dateTimePicker_TimeAppt.Size = new System.Drawing.Size(302, 26);
             this.dateTimePicker_TimeAppt.TabIndex = 3;
             // 
@@ -205,11 +197,45 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Time:";
             // 
+            // cb_Reminder
+            // 
+            this.cb_Reminder.AutoSize = true;
+            this.cb_Reminder.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_Reminder.Location = new System.Drawing.Point(10, 384);
+            this.cb_Reminder.Name = "cb_Reminder";
+            this.cb_Reminder.Size = new System.Drawing.Size(142, 24);
+            this.cb_Reminder.TabIndex = 13;
+            this.cb_Reminder.Text = "Set Reminder:";
+            this.cb_Reminder.UseVisualStyleBackColor = true;
+            this.cb_Reminder.CheckedChanged += new System.EventHandler(this.cb_Reminder_CheckedChanged);
+            // 
+            // lb_AppointmentBook
+            // 
+            this.lb_AppointmentBook.FormattingEnabled = true;
+            this.lb_AppointmentBook.ItemHeight = 20;
+            this.lb_AppointmentBook.Location = new System.Drawing.Point(407, 42);
+            this.lb_AppointmentBook.Name = "lb_AppointmentBook";
+            this.lb_AppointmentBook.Size = new System.Drawing.Size(513, 464);
+            this.lb_AppointmentBook.TabIndex = 4;
+            this.lb_AppointmentBook.SelectedIndexChanged += new System.EventHandler(this.lb_AppointmentBook_SelectedIndexChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(404, 14);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(519, 25);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Appointments: (Select an Appointment to \"edit\" or \"delete\")";
+            // 
             // Appointment_Book
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(653, 528);
+            this.ClientSize = new System.Drawing.Size(974, 557);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lb_AppointmentBook);
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Appointment_Book";
@@ -217,6 +243,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -230,11 +257,13 @@
         private System.Windows.Forms.RichTextBox rtb_ApptNotes;
         private System.Windows.Forms.Label Notes;
         private System.Windows.Forms.Button addApt;
-        private System.Windows.Forms.RadioButton rb_Reminder;
         private System.Windows.Forms.DateTimePicker dateTimePicker_ReminderDate;
         private System.Windows.Forms.Label reminderTimeLabel;
         private System.Windows.Forms.Label reminderDateLabel;
         private System.Windows.Forms.DateTimePicker dateTimePicker_ReminderTime;
+        private System.Windows.Forms.CheckBox cb_Reminder;
+        private System.Windows.Forms.ListBox lb_AppointmentBook;
+        private System.Windows.Forms.Label label2;
     }
 }
 

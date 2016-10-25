@@ -34,23 +34,26 @@
             this.stopBtn = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.clockTimer = new System.Windows.Forms.Timer(this.components);
+            this.btn_AppointmentBook = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // currTimeLabel
             // 
             this.currTimeLabel.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.currTimeLabel.ForeColor = System.Drawing.Color.Transparent;
-            this.currTimeLabel.Location = new System.Drawing.Point(12, 9);
+            this.currTimeLabel.Location = new System.Drawing.Point(18, 14);
+            this.currTimeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.currTimeLabel.Name = "currTimeLabel";
-            this.currTimeLabel.Size = new System.Drawing.Size(318, 68);
+            this.currTimeLabel.Size = new System.Drawing.Size(477, 105);
             this.currTimeLabel.TabIndex = 0;
             this.currTimeLabel.Text = "label1";
             // 
             // alarmBtn
             // 
-            this.alarmBtn.Location = new System.Drawing.Point(21, 173);
+            this.alarmBtn.Location = new System.Drawing.Point(32, 266);
+            this.alarmBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.alarmBtn.Name = "alarmBtn";
-            this.alarmBtn.Size = new System.Drawing.Size(75, 23);
+            this.alarmBtn.Size = new System.Drawing.Size(112, 35);
             this.alarmBtn.TabIndex = 1;
             this.alarmBtn.Text = "Set Alarm";
             this.alarmBtn.UseVisualStyleBackColor = true;
@@ -58,9 +61,10 @@
             // 
             // stopBtn
             // 
-            this.stopBtn.Location = new System.Drawing.Point(21, 202);
+            this.stopBtn.Location = new System.Drawing.Point(32, 311);
+            this.stopBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.stopBtn.Name = "stopBtn";
-            this.stopBtn.Size = new System.Drawing.Size(75, 23);
+            this.stopBtn.Size = new System.Drawing.Size(112, 35);
             this.stopBtn.TabIndex = 2;
             this.stopBtn.Text = "Stop Alarm";
             this.stopBtn.UseVisualStyleBackColor = true;
@@ -68,9 +72,10 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(21, 231);
+            this.button3.Location = new System.Drawing.Point(32, 355);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(112, 35);
             this.button3.TabIndex = 3;
             this.button3.Text = "Snooze";
             this.button3.UseVisualStyleBackColor = true;
@@ -82,16 +87,28 @@
             this.clockTimer.Interval = 1000;
             this.clockTimer.Tick += new System.EventHandler(this.clockTimer_Tick);
             // 
+            // btn_AppointmentBook
+            // 
+            this.btn_AppointmentBook.Location = new System.Drawing.Point(279, 205);
+            this.btn_AppointmentBook.Name = "btn_AppointmentBook";
+            this.btn_AppointmentBook.Size = new System.Drawing.Size(167, 41);
+            this.btn_AppointmentBook.TabIndex = 4;
+            this.btn_AppointmentBook.Text = "Appointment Book";
+            this.btn_AppointmentBook.UseVisualStyleBackColor = true;
+            this.btn_AppointmentBook.Click += new System.EventHandler(this.btn_AppointmentBook_Click);
+            // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(342, 278);
+            this.ClientSize = new System.Drawing.Size(513, 428);
+            this.Controls.Add(this.btn_AppointmentBook);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.stopBtn);
             this.Controls.Add(this.alarmBtn);
             this.Controls.Add(this.currTimeLabel);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Main";
             this.Text = " ";
             this.ResumeLayout(false);
@@ -105,5 +122,6 @@
         private System.Windows.Forms.Button stopBtn;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Timer clockTimer;
+        private System.Windows.Forms.Button btn_AppointmentBook;
     }
 }
