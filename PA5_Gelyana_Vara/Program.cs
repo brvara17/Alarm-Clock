@@ -68,10 +68,6 @@ namespace PA5_Gelyana_Vara
     {
         public static int appointmentSelected;
 
-        public void CleanUpDelete()
-        {
-
-        }
     }
 
     

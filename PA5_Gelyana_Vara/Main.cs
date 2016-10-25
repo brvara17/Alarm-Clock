@@ -45,6 +45,7 @@ namespace PA5_Gelyana_Vara
             set;
         }
 
+
         private void clockTimer_Tick(object sender, EventArgs e)
         {
             currTimeLabel.Text = DateTime.Now.ToString("M /dd/yyyy hh:mm:ss tt");
@@ -56,6 +57,19 @@ namespace PA5_Gelyana_Vara
                alarmSound.Play();              
                
             }
+
+            foreach(Appointment apt in Appointment_Book.appointment_Book)
+            {
+                
+                    if(DateTime.Now == apt.reminderDateTime)
+                    {
+                        alarmSound.Play();
+                        MessageBox.Show(apt.ToString());
+                    }
+                
+            }
+
+           
 
 
         }

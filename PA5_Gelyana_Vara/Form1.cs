@@ -13,7 +13,7 @@ namespace PA5_Gelyana_Vara
     public partial class Appointment_Book : Form
     {
         public static List<Appointment> appointment_Book = new List<Appointment>();
-        bool reminderActive = false;
+        //bool reminderActive = false;
         bool editActive = false;
         bool deleteActive = false;
 
@@ -103,7 +103,7 @@ namespace PA5_Gelyana_Vara
             dateTimePicker_ReminderDate.Visible = false;
             reminderTimeLabel.Visible = false;
             dateTimePicker_ReminderTime.Visible = false;
-            reminderActive = false;
+            //reminderActive = false;
 
             btn_DoneEditing.Visible = false;
             addApt.Visible = true;
@@ -140,7 +140,7 @@ namespace PA5_Gelyana_Vara
                 dateTimePicker_ReminderDate.Visible = true;
                 reminderTimeLabel.Visible = true;
                 dateTimePicker_ReminderTime.Visible = true;
-                reminderActive = true;
+                //reminderActive = true;
             }
             else if (!cb_Reminder.Checked)
             {
@@ -148,7 +148,7 @@ namespace PA5_Gelyana_Vara
                 dateTimePicker_ReminderDate.Visible = false;
                 reminderTimeLabel.Visible = false;
                 dateTimePicker_ReminderTime.Visible = false;
-                reminderActive = false;
+                //reminderActive = false;
             }
         }
 

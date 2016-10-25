@@ -24,4 +24,3 @@ C:\Users\Projects\OneDrive\Compe 361\Programming Assignments\ProgrammingAssignme
 C:\Users\Projects\OneDrive\Compe 361\Programming Assignments\ProgrammingAssignment5\Alarm-Clock\PA5_Gelyana_Vara\obj\Debug\PA5_Gelyana_Vara.Main.resources
 C:\Users\Projects\OneDrive\Compe 361\Programming Assignments\ProgrammingAssignment5\Alarm-Clock\PA5_Gelyana_Vara\obj\Debug\PA5_Gelyana_Vara.Properties.Resources.resources
 C:\Users\Projects\OneDrive\Compe 361\Programming Assignments\ProgrammingAssignment5\Alarm-Clock\PA5_Gelyana_Vara\obj\Debug\PA5_Gelyana_Vara.csproj.GenerateResource.Cache
-C:\Users\Projects\OneDrive\Compe 361\Programming Assignments\ProgrammingAssignment5\Alarm-Clock\PA5_Gelyana_Vara\obj\Debug\PA5_Gelyana_Vara.EditorDeleteMessageBox.resources
