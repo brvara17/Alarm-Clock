@@ -61,17 +61,14 @@ namespace PA5_Gelyana_Vara
             foreach(Appointment apt in Appointment_Book.appointment_Book)
             {
                 
-                    if(DateTime.Now.ToString("M/dd/yyyy hh:mm:ss tt") == apt.reminderDateTime.ToString())
+                    if(DateTime.Now.ToString("M/dd/yyyy hh:mm:ss tt") == apt.reminderDateTime.ToString("M/dd/yyyy hh:mm:ss tt"))
                     {
                         alarmSound.Play();
                         MessageBox.Show(apt.ToString());
                     }
                 
             }
-
-           
-
-
+            
         }
         
     
