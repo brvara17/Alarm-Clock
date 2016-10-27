@@ -12,14 +12,18 @@ namespace PA5_Gelyana_Vara
 {
     public partial class Appointment_Book : Form
     {
+        //Holds all active appointments in application
         public static List<Appointment> appointment_Book = new List<Appointment>();
-        //bool reminderActive = false;
+
+        //Used to hide and show certain ascpects of the application depending on if you are editing or deleting an appt
         bool editActive = false;
         bool deleteActive = false;
 
         public Appointment_Book()
         {
             InitializeComponent();
+
+            //Updates the Appointment listbox upon initialization of the Form
             lb_AppointmentBook.Items.Clear();
             lb_AppointmentBook.BeginUpdate();
             lb_AppointmentBook.Items.Clear();
@@ -41,6 +45,11 @@ namespace PA5_Gelyana_Vara
 
         }
 
+        /// <summary>
+        /// Adds all new appointments to the appointment book
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void addApt_Click(object sender, EventArgs e)
         {
             int addAppt = 0;
@@ -95,6 +104,10 @@ namespace PA5_Gelyana_Vara
 
         }
 
+        /// <summary>
+        /// Does the clean up work for the application once an appointment is added, editied, or deleted.
+        /// Will hide buttons and set variables back to their initial states.
+        /// </summary>
         public void CleanUpAdd()
         {
             
@@ -103,7 +116,6 @@ namespace PA5_Gelyana_Vara
             dateTimePicker_ReminderDate.Visible = false;
             reminderTimeLabel.Visible = false;
             dateTimePicker_ReminderTime.Visible = false;
-            //reminderActive = false;
 
             btn_DoneEditing.Visible = false;
             addApt.Visible = true;
@@ -131,7 +143,12 @@ namespace PA5_Gelyana_Vara
             lb_AppointmentBook.EndUpdate();
         }
 
-
+        /// <summary>
+        /// If the Reminder check box has been selected the 
+        /// areas to enter the reminder will be visible.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cb_Reminder_CheckedChanged(object sender, EventArgs e)
         {
             if (cb_Reminder.Checked)
@@ -140,7 +157,6 @@ namespace PA5_Gelyana_Vara
                 dateTimePicker_ReminderDate.Visible = true;
                 reminderTimeLabel.Visible = true;
                 dateTimePicker_ReminderTime.Visible = true;
-                //reminderActive = true;
             }
             else if (!cb_Reminder.Checked)
             {
@@ -148,10 +164,15 @@ namespace PA5_Gelyana_Vara
                 dateTimePicker_ReminderDate.Visible = false;
                 reminderTimeLabel.Visible = false;
                 dateTimePicker_ReminderTime.Visible = false;
-                //reminderActive = false;
             }
         }
 
+        /// <summary>
+        /// When the user clicks on the appointment notes text box it will delete the 
+        /// "Enter Appointment Notes" text
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void rtb_ApptNotes_Click(object sender, EventArgs e)
         {
             if(rtb_ApptNotes.Text == "Enter Appointment Notes")
@@ -160,11 +181,17 @@ namespace PA5_Gelyana_Vara
             }
         }
 
+        /// <summary>
+        /// If the index of the appointment book listbox is changed the 
+        /// data from the selected appointment will be populated into the editing categories, 
+        /// IFF the user is in the edit or delete mode of the application
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void lb_AppointmentBook_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //EditorDeleteMessageBox editOrDelete = new EditorDeleteMessageBox();
-            //editOrDelete.Show();
-            
+            //Transfers data from selected appointment to the set appointment section of the Form
+            //Only if the user is in the edit or delete mode of the application
             if (editActive || deleteActive)
             {
                 cb_Reminder.Checked = false;
@@ -186,10 +213,12 @@ namespace PA5_Gelyana_Vara
             }
           
         }
-
+        /// <summary>
+        /// Once the user makes an edit or delete to the appointment book this function will
+        /// populate the appointment book listbox with the new data;
+        /// </summary>
         public void reload_lb_AppointmentBook()
         {
-            Console.WriteLine("Reload lb Appointment Book");
             lb_AppointmentBook.Items.Clear();
             lb_AppointmentBook.BeginUpdate();
             lb_AppointmentBook.Items.Clear();
@@ -200,6 +229,12 @@ namespace PA5_Gelyana_Vara
             lb_AppointmentBook.EndUpdate();
         }
 
+        /// <summary>
+        /// Once the edit button is selected the user will be put into the editing
+        /// mode of the application
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_Edit_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Select an Appointment from the List below to Edit:");
@@ -210,6 +245,12 @@ namespace PA5_Gelyana_Vara
 
         }
 
+        /// <summary>
+        /// Once the user is done editing the selected appointment 
+        /// the new appointment will be added and the old one will be deleted
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_DoneEditing_Click(object sender, EventArgs e)
         {
             Appointment itemToEdit = new Appointment();
@@ -221,6 +262,10 @@ namespace PA5_Gelyana_Vara
 
         }
 
+        /// <summary>
+        /// This function is used to add a new appointment when an edit is done
+        /// to an existing appointment.
+        /// </summary>
         public void AddNewAppointment()
         {
             int addAppt = 0;
@@ -273,6 +318,12 @@ namespace PA5_Gelyana_Vara
             CleanUpAdd();
         }
 
+        /// <summary>
+        /// Once the delete button is selected the user will be put into the deleting
+        /// mode of the application
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_Delete_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Select an Appointment from the List below to Delete:");
@@ -282,6 +333,12 @@ namespace PA5_Gelyana_Vara
             cb_Reminder.Checked = false;
         }
 
+        /// <summary>
+        /// Once the user Confirms to delete the selected appointment the 
+        /// this function will delete it from the appointment book
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_DoneDelete_Click(object sender, EventArgs e)
         {
             Appointment itemToEdit = new Appointment();

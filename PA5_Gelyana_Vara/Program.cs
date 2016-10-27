@@ -25,7 +25,10 @@ namespace PA5_Gelyana_Vara
     }
 
 
-
+    /// <summary>
+    /// Appointment class holds all the values associated with every appointment
+    /// created in the application
+    /// </summary>
     public class Appointment
     {
         public DateTime myDateTime;
@@ -33,18 +36,30 @@ namespace PA5_Gelyana_Vara
         public bool reminder = false;
         public DateTime reminderDateTime;
 
+        /// <summary>
+        /// Used to set the Date and Time of an Appointment
+        /// </summary>
+        /// <param name="date">Gets the value of the specified appointment date and time</param>
+        /// <param name="notes">Gets the string of notes for the specified appointment</param>
         public void SetAppointment(DateTime date, string notes)
         {
             myDateTime = date;
             apptNotes = notes;
         }
 
+        /// <summary>
+        /// Property for getting and setting the Date and Time or the appointment
+        /// </summary>
         public DateTime GetDateTime
         {
             get { return myDateTime; }
             set { myDateTime = value; }
         }
 
+        /// <summary>
+        /// Used to output the Values of an Appointment in a presentable format.
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             string printview;
@@ -67,6 +82,9 @@ namespace PA5_Gelyana_Vara
         }
     }
 
+    /// <summary>
+    /// Used to know what appointment is selected in the Appointment Book listbox.
+    /// </summary>
     public class Variables
     {
         public static int appointmentSelected;
