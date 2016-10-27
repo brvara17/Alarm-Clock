@@ -8,6 +8,8 @@ namespace PA5_Gelyana_Vara
     public partial class Main : Form
     {
         DateTime currTime = new DateTime();
+        DateTime snoozeTime = new DateTime();
+
         SoundPlayer alarmSound = new SoundPlayer(@"C:\Users\Manny\Desktop\Fall 2016\Compe 361\chris.wav");
 
 
@@ -16,11 +18,8 @@ namespace PA5_Gelyana_Vara
             InitializeComponent();
             
         }
-        public bool alarmSoundStop
-        {
-            get;
-            set;
-        }
+
+        
         public int alarmHour
         {
             get;
@@ -44,31 +43,69 @@ namespace PA5_Gelyana_Vara
             get;
             set;
         }
+        public int snoozeHour
+        {
+            get;
+            set;
+        }
+
+        public int snoozeMin
+        {
+            get;
+            set;
+        }
+
+        public int snoozeSec
+        {
+            get;
+            set;
+        }
+
+        public void Snooze()
+        {
+            snoozeTime = DateTime.Now;
+            snoozeTime = snoozeTime.AddHours(snoozeHour);
+            snoozeTime = snoozeTime.AddMinutes(snoozeMin);
+            snoozeTime = snoozeTime.AddSeconds(snoozeSec);
+        }
 
 
         private void clockTimer_Tick(object sender, EventArgs e)
         {
             currTimeLabel.Text = DateTime.Now.ToString("M/dd/yyyy hh:mm:ss tt");
             currTime = DateTime.Now;
+            //snoozeTime = DateTime.Now;
+
+            
 
             if ((currTime.Hour == alarmHour) && (currTime.Minute == alarmMin) && (currTime.Second == alarmSec)
               && (currTime.ToString("tt") == alarmAmPm))
             {
-               alarmSound.Play();              
+               //alarmSound.Play();
+                MessageBox.Show("Alarm");            
                
             }
 
-            foreach(Appointment apt in Appointment_Book.appointment_Book)
+
+            if (currTime.Hour == snoozeTime.Hour && currTime.Minute == snoozeTime.Minute && currTime.Second == snoozeTime.Second)
             {
                 
-                    if(DateTime.Now.ToString("M/dd/yyyy hh:mm:ss tt") == apt.reminderDateTime.ToString("M/dd/yyyy hh:mm:ss tt"))
-                    {
-                        alarmSound.Play();
-                        MessageBox.Show(apt.ToString());
-                    }
-                
+                //alarmSound.Play();
+                MessageBox.Show("Snooze");
             }
-            
+
+
+            foreach (Appointment apt in Appointment_Book.appointment_Book)
+            {
+
+                if (DateTime.Now.ToString("M/dd/yyyy hh:mm:ss tt") == apt.reminderDateTime.ToString("M/dd/yyyy hh:mm:ss tt"))
+                {
+                    alarmSound.Play();
+                    MessageBox.Show(apt.ToString());
+                }
+
+            }
+
         }
         
     
@@ -77,6 +114,7 @@ namespace PA5_Gelyana_Vara
             Form2 frm2 = new Form2();
             frm2.Show();
         }
+
         private void stopBtn_Click(object sender, EventArgs e)
         {
             alarmSound.Stop();
@@ -85,13 +123,22 @@ namespace PA5_Gelyana_Vara
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
+            SnoozeForm snzFrm1 = new SnoozeForm();
+            snzFrm1.Show();
         }
 
         private void btn_AppointmentBook_Click(object sender, EventArgs e)
         {
             Appointment_Book form1 = new Appointment_Book();
             form1.Show();
+        }
+
+        private void snoozeBtn_Click(object sender, EventArgs e)
+        {
+            alarmSound.Stop();
+            Snooze();
+         
+              
         }
     }
 }

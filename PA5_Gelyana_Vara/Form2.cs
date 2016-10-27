@@ -12,8 +12,13 @@ namespace PA5_Gelyana_Vara
 {
     public partial class Form2 : Form
     {
+        public DateTime alarmTime
+        {
+            get;
+            set;
+        }
         
-        DateTime alarmTime = new DateTime();
+       // DateTime alarmTime = new DateTime();
         Main main1 = new Main();
         
         public Form2()
@@ -45,7 +50,6 @@ namespace PA5_Gelyana_Vara
             main1.alarmSec = alarmTime.Second;
             main1.alarmAmPm = alarmTime.ToString("tt");
             
-
         }
 
     }
