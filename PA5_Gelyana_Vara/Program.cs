@@ -19,9 +19,6 @@ namespace PA5_Gelyana_Vara
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Main());
         }
-
-
-    
     }
 
 

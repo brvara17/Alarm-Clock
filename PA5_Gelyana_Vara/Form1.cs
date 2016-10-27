@@ -89,7 +89,7 @@ namespace PA5_Gelyana_Vara
           
 
 
-            MessageBox.Show("Appointment added for:\n"+ newApt.ToString());
+            MessageBox.Show("Appointment added for:\n"+ newApt.ToString(),"New Appointment");
             
            
             Console.WriteLine(newApt.ToString());
@@ -237,7 +237,7 @@ namespace PA5_Gelyana_Vara
         /// <param name="e"></param>
         private void btn_Edit_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Select an Appointment from the List below to Edit:");
+            MessageBox.Show("Select an Appointment from the List below to Edit:","Edit Appointment");
             editActive = true;
             btn_DoneEditing.Visible = true;
             addApt.Visible = false;
@@ -275,7 +275,7 @@ namespace PA5_Gelyana_Vara
 
             if(!DateTime.TryParse(apptDateTime, out newApt.myDateTime))
             {
-                MessageBox.Show("Error! Please Enter a new appointment Date and Time.");
+                MessageBox.Show("Error! Please Enter a new appointment Date and Time.","Error");
                 addAppt = 0;
             }
             else
@@ -292,7 +292,7 @@ namespace PA5_Gelyana_Vara
 
                 if (!(DateTime.TryParse(reminderDateTime, out newApt.reminderDateTime)))
                 {
-                    MessageBox.Show("Error in reminder");
+                    MessageBox.Show("Error in reminder","Error");
                     addAppt = 0;
                 }
                 else
@@ -305,10 +305,7 @@ namespace PA5_Gelyana_Vara
           
 
 
-            MessageBox.Show("Appointment added for:\n"+ newApt.ToString());
-            
-           
-            Console.WriteLine(newApt.ToString());
+            MessageBox.Show("Appointment added for:\n"+ newApt.ToString(),"Edited Appointment");
 
             if(addAppt == 1)
             {
@@ -326,7 +323,7 @@ namespace PA5_Gelyana_Vara
         /// <param name="e"></param>
         private void btn_Delete_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Select an Appointment from the List below to Delete:");
+            MessageBox.Show("Select an Appointment from the List below to Delete:","Delete Appointment");
             deleteActive = true;
             btn_DoneDelete.Visible = true;
             addApt.Visible = false;
@@ -347,6 +344,13 @@ namespace PA5_Gelyana_Vara
             appointment_Book.Remove(itemToEdit);
 
             CleanUpAdd();
+        }
+
+        private void lb_AppointmentBook_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            int selectedappt = lb_AppointmentBook.SelectedIndex;
+            Appointment apptViewNow = appointment_Book.ElementAt(selectedappt);
+            MessageBox.Show(apptViewNow.ToString(),"Appointment");
         }
     }
 }

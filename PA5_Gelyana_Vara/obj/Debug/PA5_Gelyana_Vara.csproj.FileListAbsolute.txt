@@ -38,3 +38,4 @@ C:\Users\Manny\Documents\Alarm-Clock\PA5_Gelyana_Vara\obj\Debug\PA5_Gelyana_Vara
 C:\Users\Manny\Documents\Alarm-Clock\PA5_Gelyana_Vara\obj\Debug\PA5_Gelyana_Vara.Properties.Resources.resources
 C:\Users\Manny\Documents\Alarm-Clock\PA5_Gelyana_Vara\obj\Debug\PA5_Gelyana_Vara.csproj.GenerateResource.Cache
 C:\Users\Manny\Documents\Alarm-Clock\PA5_Gelyana_Vara\obj\Debug\PA5_Gelyana_Vara.SnoozeForm.resources
+C:\Users\Projects\OneDrive\Compe 361\Programming Assignments\ProgrammingAssignment5\Alarm-Clock\PA5_Gelyana_Vara\obj\Debug\PA5_Gelyana_Vara.SnoozeForm.resources

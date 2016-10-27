@@ -31,6 +31,8 @@
             this.dateTimePicker_DateAppt = new System.Windows.Forms.DateTimePicker();
             this.Date = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_DoneDelete = new System.Windows.Forms.Button();
+            this.btn_DoneEditing = new System.Windows.Forms.Button();
             this.cb_Reminder = new System.Windows.Forms.CheckBox();
             this.reminderTimeLabel = new System.Windows.Forms.Label();
             this.reminderDateLabel = new System.Windows.Forms.Label();
@@ -45,8 +47,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btn_Edit = new System.Windows.Forms.Button();
             this.btn_Delete = new System.Windows.Forms.Button();
-            this.btn_DoneEditing = new System.Windows.Forms.Button();
-            this.btn_DoneDelete = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -99,6 +99,30 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Set Appointment:";
+            // 
+            // btn_DoneDelete
+            // 
+            this.btn_DoneDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_DoneDelete.Location = new System.Drawing.Point(7, 445);
+            this.btn_DoneDelete.Name = "btn_DoneDelete";
+            this.btn_DoneDelete.Size = new System.Drawing.Size(145, 36);
+            this.btn_DoneDelete.TabIndex = 15;
+            this.btn_DoneDelete.Text = "Delete";
+            this.btn_DoneDelete.UseVisualStyleBackColor = true;
+            this.btn_DoneDelete.Visible = false;
+            this.btn_DoneDelete.Click += new System.EventHandler(this.btn_DoneDelete_Click);
+            // 
+            // btn_DoneEditing
+            // 
+            this.btn_DoneEditing.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_DoneEditing.Location = new System.Drawing.Point(7, 445);
+            this.btn_DoneEditing.Name = "btn_DoneEditing";
+            this.btn_DoneEditing.Size = new System.Drawing.Size(145, 36);
+            this.btn_DoneEditing.TabIndex = 14;
+            this.btn_DoneEditing.Text = "Done Editing";
+            this.btn_DoneEditing.UseVisualStyleBackColor = true;
+            this.btn_DoneEditing.Visible = false;
+            this.btn_DoneEditing.Click += new System.EventHandler(this.btn_DoneEditing_Click);
             // 
             // cb_Reminder
             // 
@@ -224,6 +248,7 @@
             this.lb_AppointmentBook.Size = new System.Drawing.Size(513, 464);
             this.lb_AppointmentBook.TabIndex = 4;
             this.lb_AppointmentBook.SelectedIndexChanged += new System.EventHandler(this.lb_AppointmentBook_SelectedIndexChanged);
+            this.lb_AppointmentBook.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lb_AppointmentBook_MouseDoubleClick);
             // 
             // label2
             // 
@@ -254,30 +279,6 @@
             this.btn_Delete.Text = "Delete";
             this.btn_Delete.UseVisualStyleBackColor = true;
             this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
-            // 
-            // btn_DoneEditing
-            // 
-            this.btn_DoneEditing.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_DoneEditing.Location = new System.Drawing.Point(7, 445);
-            this.btn_DoneEditing.Name = "btn_DoneEditing";
-            this.btn_DoneEditing.Size = new System.Drawing.Size(145, 36);
-            this.btn_DoneEditing.TabIndex = 14;
-            this.btn_DoneEditing.Text = "Done Editing";
-            this.btn_DoneEditing.UseVisualStyleBackColor = true;
-            this.btn_DoneEditing.Visible = false;
-            this.btn_DoneEditing.Click += new System.EventHandler(this.btn_DoneEditing_Click);
-            // 
-            // btn_DoneDelete
-            // 
-            this.btn_DoneDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_DoneDelete.Location = new System.Drawing.Point(7, 445);
-            this.btn_DoneDelete.Name = "btn_DoneDelete";
-            this.btn_DoneDelete.Size = new System.Drawing.Size(145, 36);
-            this.btn_DoneDelete.TabIndex = 15;
-            this.btn_DoneDelete.Text = "Delete";
-            this.btn_DoneDelete.UseVisualStyleBackColor = true;
-            this.btn_DoneDelete.Visible = false;
-            this.btn_DoneDelete.Click += new System.EventHandler(this.btn_DoneDelete_Click);
             // 
             // Appointment_Book
             // 
