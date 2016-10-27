@@ -76,7 +76,7 @@
             this.snzBtn.TabIndex = 3;
             this.snzBtn.Text = "Snooze Setting";
             this.snzBtn.UseVisualStyleBackColor = true;
-            this.snzBtn.Click += new System.EventHandler(this.button3_Click);
+            this.snzBtn.Click += new System.EventHandler(this.snzBtn_Click);
             // 
             // clockTimer
             // 

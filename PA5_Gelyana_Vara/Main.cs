@@ -11,28 +11,47 @@ namespace PA5_Gelyana_Vara
         DateTime snoozeTime = new DateTime();
 
         SoundPlayer alarmSound = new SoundPlayer(@"C:\Users\Manny\Desktop\Fall 2016\Compe 361\chris.wav");
-
+        
 
         public Main()
         {
             InitializeComponent();
-            
+            alarmSet = false;
+            alarmWentOff = false;
+            snoozeSet = false;
+
         }
 
-        
-        public int alarmHour
+        public static bool snoozeSet
         {
             get;
             set;
         }
 
-        public int alarmMin
+        public static bool alarmWentOff
         {
             get;
             set;
         }
 
-        public int alarmSec
+        public static bool alarmSet
+        {
+            get;
+            set;
+        }
+        public static int alarmHour
+        {
+            get;
+            set;
+        }
+
+        public static  int alarmMin
+        {
+            get;
+            set;
+        }
+
+        public static int alarmSec
         {
             get;
             set;
@@ -43,19 +62,19 @@ namespace PA5_Gelyana_Vara
             get;
             set;
         }
-        public int snoozeHour
+        public static int snoozeHour
         {
             get;
             set;
         }
 
-        public int snoozeMin
+        public static int snoozeMin
         {
             get;
             set;
         }
 
-        public int snoozeSec
+        public static int snoozeSec
         {
             get;
             set;
@@ -67,31 +86,33 @@ namespace PA5_Gelyana_Vara
             snoozeTime = snoozeTime.AddHours(snoozeHour);
             snoozeTime = snoozeTime.AddMinutes(snoozeMin);
             snoozeTime = snoozeTime.AddSeconds(snoozeSec);
+
         }
 
-
+        
         private void clockTimer_Tick(object sender, EventArgs e)
         {
             currTimeLabel.Text = DateTime.Now.ToString("M/dd/yyyy hh:mm:ss tt");
             currTime = DateTime.Now;
-            //snoozeTime = DateTime.Now;
 
             
 
             if ((currTime.Hour == alarmHour) && (currTime.Minute == alarmMin) && (currTime.Second == alarmSec)
               && (currTime.ToString("tt") == alarmAmPm))
             {
-               //alarmSound.Play();
-                MessageBox.Show("Alarm");            
+                alarmWentOff = true;
+               alarmSound.PlayLooping();
+                
                
             }
 
 
             if (currTime.Hour == snoozeTime.Hour && currTime.Minute == snoozeTime.Minute && currTime.Second == snoozeTime.Second)
-            {
-                
-                //alarmSound.Play();
-                MessageBox.Show("Snooze");
+            {                
+                alarmSound.PlayLooping();
+                alarmWentOff = true;
+                snoozeSet = true;
+
             }
 
 
@@ -100,7 +121,7 @@ namespace PA5_Gelyana_Vara
 
                 if (DateTime.Now.ToString("M/dd/yyyy hh:mm:ss tt") == apt.reminderDateTime.ToString("M/dd/yyyy hh:mm:ss tt"))
                 {
-                    alarmSound.Play();
+                    alarmSound.PlayLooping();
                     MessageBox.Show(apt.ToString());
                 }
 
@@ -117,11 +138,13 @@ namespace PA5_Gelyana_Vara
 
         private void stopBtn_Click(object sender, EventArgs e)
         {
+            
             alarmSound.Stop();
-                       
+            alarmWentOff = false;
+            
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void snzBtn_Click(object sender, EventArgs e)
         {
             SnoozeForm snzFrm1 = new SnoozeForm();
             snzFrm1.Show();
@@ -136,9 +159,32 @@ namespace PA5_Gelyana_Vara
         private void snoozeBtn_Click(object sender, EventArgs e)
         {
             alarmSound.Stop();
-            Snooze();
-         
-              
+
+            if (alarmSet && !snoozeSet)
+            {
+                MessageBox.Show("Please set your snooze interval!");
+            }
+            else if(alarmSet && snoozeSet)
+            {
+                MessageBox.Show("Waiting for alarm...");
+            }
+            else if(snoozeSet && alarmWentOff)
+            {
+                Snooze();
+                alarmWentOff = false;
+                alarmSet = false;
+                snoozeSet = false;
+            }
+            else if (!alarmSet && !snoozeSet)
+            {
+                MessageBox.Show("Please set your Alarm and Snooze settings!");
+            }
+            else if(!alarmSet && snoozeSet)
+            {
+                MessageBox.Show("Please set your alarm!");
+            }
+           
+            
         }
     }
 }

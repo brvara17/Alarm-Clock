@@ -36,7 +36,7 @@
             // 
             // setBtn
             // 
-            this.setBtn.Location = new System.Drawing.Point(28, 64);
+            this.setBtn.Location = new System.Drawing.Point(28, 71);
             this.setBtn.Name = "setBtn";
             this.setBtn.Size = new System.Drawing.Size(63, 23);
             this.setBtn.TabIndex = 1;
@@ -56,7 +56,7 @@
             // 
             // closeBtn
             // 
-            this.closeBtn.Location = new System.Drawing.Point(97, 64);
+            this.closeBtn.Location = new System.Drawing.Point(97, 71);
             this.closeBtn.Name = "closeBtn";
             this.closeBtn.Size = new System.Drawing.Size(63, 23);
             this.closeBtn.TabIndex = 11;
@@ -64,7 +64,7 @@
             this.closeBtn.UseVisualStyleBackColor = true;
             this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
             // 
-            // Form1
+            // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -73,7 +73,7 @@
             this.Controls.Add(this.alarmTimePick);
             this.Controls.Add(this.setBtn);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form1";
+            this.Name = "Form2";
             this.Text = "Set Alarm";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);

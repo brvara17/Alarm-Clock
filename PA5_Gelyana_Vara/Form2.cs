@@ -38,17 +38,18 @@ namespace PA5_Gelyana_Vara
         {
             alarmTimePick.ShowUpDown = true;
             alarmTimePick.Value = DateTime.Now.Date;
-
         }
 
       
         private void setBtn_Click(object sender, EventArgs e)
         {
+            Main.alarmSet = true;
             alarmTime = alarmTimePick.Value;
-            main1.alarmHour = alarmTime.Hour;
-            main1.alarmMin = alarmTime.Minute;
-            main1.alarmSec = alarmTime.Second;
+            Main.alarmHour = alarmTime.Hour;
+            Main.alarmMin = alarmTime.Minute;
+            Main.alarmSec = alarmTime.Second;
             main1.alarmAmPm = alarmTime.ToString("tt");
+            
             
         }
 

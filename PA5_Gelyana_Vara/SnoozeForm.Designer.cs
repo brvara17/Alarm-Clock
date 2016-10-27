@@ -67,6 +67,7 @@
             this.hrBox.Name = "hrBox";
             this.hrBox.Size = new System.Drawing.Size(39, 26);
             this.hrBox.TabIndex = 5;
+            this.hrBox.Text = "0";
             this.hrBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.hrBox_KeyPress);
             // 
             // minsBox
@@ -76,6 +77,8 @@
             this.minsBox.Name = "minsBox";
             this.minsBox.Size = new System.Drawing.Size(39, 26);
             this.minsBox.TabIndex = 6;
+            this.minsBox.Text = "0";
+            this.minsBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.minsBox_KeyPress);
             // 
             // secsBox
             // 
@@ -84,6 +87,8 @@
             this.secsBox.Name = "secsBox";
             this.secsBox.Size = new System.Drawing.Size(39, 26);
             this.secsBox.TabIndex = 7;
+            this.secsBox.Text = "0";
+            this.secsBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.secsBox_KeyPress);
             // 
             // hrsLabel
             // 
