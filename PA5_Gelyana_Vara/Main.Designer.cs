@@ -81,7 +81,7 @@
             // clockTimer
             // 
             this.clockTimer.Enabled = true;
-            this.clockTimer.Interval = 1000;
+            this.clockTimer.Interval = 500;
             this.clockTimer.Tick += new System.EventHandler(this.clockTimer_Tick);
             // 
             // btn_AppointmentBook

@@ -15,10 +15,9 @@ namespace PA5_Gelyana_Vara
 
         public Main()
         {
+            
             InitializeComponent();
-            alarmSet = false;
-            alarmWentOff = false;
-            snoozeSet = false;
+            
 
         }
 
@@ -132,6 +131,7 @@ namespace PA5_Gelyana_Vara
     
         private void alarmBtn_Click(object sender, EventArgs e)
         {
+            
             Form2 frm2 = new Form2();
             frm2.Show();
         }
@@ -164,7 +164,7 @@ namespace PA5_Gelyana_Vara
             {
                 MessageBox.Show("Please set your snooze interval!");
             }
-            else if(alarmSet && snoozeSet)
+            else if(alarmSet && snoozeSet && !alarmWentOff)
             {
                 MessageBox.Show("Waiting for alarm...");
             }

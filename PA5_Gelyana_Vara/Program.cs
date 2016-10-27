@@ -6,6 +6,7 @@ using System.Windows.Forms;
 
 namespace PA5_Gelyana_Vara
 {
+
     static class Program
     {
         /// <summary>
@@ -19,6 +20,8 @@ namespace PA5_Gelyana_Vara
             Application.Run(new Main());
         }
 
+
+    
     }
 
 
