@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.currTimeLabel = new System.Windows.Forms.Label();
             this.alarmBtn = new System.Windows.Forms.Button();
             this.stopBtn = new System.Windows.Forms.Button();
@@ -36,6 +37,8 @@
             this.clockTimer = new System.Windows.Forms.Timer(this.components);
             this.btn_AppointmentBook = new System.Windows.Forms.Button();
             this.snoozeBtn = new System.Windows.Forms.Button();
+            this.imageReminder = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.imageReminder)).BeginInit();
             this.SuspendLayout();
             // 
             // currTimeLabel
@@ -50,9 +53,9 @@
             // 
             // alarmBtn
             // 
-            this.alarmBtn.Location = new System.Drawing.Point(18, 131);
+            this.alarmBtn.Location = new System.Drawing.Point(18, 222);
             this.alarmBtn.Name = "alarmBtn";
-            this.alarmBtn.Size = new System.Drawing.Size(87, 23);
+            this.alarmBtn.Size = new System.Drawing.Size(99, 31);
             this.alarmBtn.TabIndex = 1;
             this.alarmBtn.Text = "Alarm Setting";
             this.alarmBtn.UseVisualStyleBackColor = true;
@@ -60,9 +63,9 @@
             // 
             // stopBtn
             // 
-            this.stopBtn.Location = new System.Drawing.Point(18, 160);
+            this.stopBtn.Location = new System.Drawing.Point(18, 251);
             this.stopBtn.Name = "stopBtn";
-            this.stopBtn.Size = new System.Drawing.Size(87, 23);
+            this.stopBtn.Size = new System.Drawing.Size(99, 31);
             this.stopBtn.TabIndex = 2;
             this.stopBtn.Text = "Stop Alarm";
             this.stopBtn.UseVisualStyleBackColor = true;
@@ -70,9 +73,9 @@
             // 
             // snzBtn
             // 
-            this.snzBtn.Location = new System.Drawing.Point(18, 218);
+            this.snzBtn.Location = new System.Drawing.Point(18, 309);
             this.snzBtn.Name = "snzBtn";
-            this.snzBtn.Size = new System.Drawing.Size(87, 23);
+            this.snzBtn.Size = new System.Drawing.Size(99, 31);
             this.snzBtn.TabIndex = 3;
             this.snzBtn.Text = "Snooze Setting";
             this.snzBtn.UseVisualStyleBackColor = true;
@@ -86,7 +89,7 @@
             // 
             // btn_AppointmentBook
             // 
-            this.btn_AppointmentBook.Location = new System.Drawing.Point(186, 133);
+            this.btn_AppointmentBook.Location = new System.Drawing.Point(193, 97);
             this.btn_AppointmentBook.Margin = new System.Windows.Forms.Padding(2);
             this.btn_AppointmentBook.Name = "btn_AppointmentBook";
             this.btn_AppointmentBook.Size = new System.Drawing.Size(111, 27);
@@ -97,20 +100,30 @@
             // 
             // snoozeBtn
             // 
-            this.snoozeBtn.Location = new System.Drawing.Point(18, 189);
+            this.snoozeBtn.Location = new System.Drawing.Point(18, 280);
             this.snoozeBtn.Name = "snoozeBtn";
-            this.snoozeBtn.Size = new System.Drawing.Size(87, 23);
+            this.snoozeBtn.Size = new System.Drawing.Size(99, 31);
             this.snoozeBtn.TabIndex = 5;
             this.snoozeBtn.Text = "Snooze";
             this.snoozeBtn.UseVisualStyleBackColor = true;
             this.snoozeBtn.Click += new System.EventHandler(this.snoozeBtn_Click);
+            // 
+            // imageReminder
+            // 
+            this.imageReminder.Image = ((System.Drawing.Image)(resources.GetObject("imageReminder.Image")));
+            this.imageReminder.Location = new System.Drawing.Point(193, 129);
+            this.imageReminder.Name = "imageReminder";
+            this.imageReminder.Size = new System.Drawing.Size(179, 211);
+            this.imageReminder.TabIndex = 6;
+            this.imageReminder.TabStop = false;
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(342, 278);
+            this.ClientSize = new System.Drawing.Size(397, 356);
+            this.Controls.Add(this.imageReminder);
             this.Controls.Add(this.snoozeBtn);
             this.Controls.Add(this.btn_AppointmentBook);
             this.Controls.Add(this.snzBtn);
@@ -119,6 +132,7 @@
             this.Controls.Add(this.currTimeLabel);
             this.Name = "Main";
             this.Text = " ";
+            ((System.ComponentModel.ISupportInitialize)(this.imageReminder)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -132,5 +146,6 @@
         private System.Windows.Forms.Timer clockTimer;
         private System.Windows.Forms.Button btn_AppointmentBook;
         private System.Windows.Forms.Button snoozeBtn;
+        private System.Windows.Forms.PictureBox imageReminder;
     }
 }

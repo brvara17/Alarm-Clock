@@ -133,7 +133,7 @@ namespace PA5_Gelyana_Vara
         {
             
             Form2 frm2 = new Form2();
-            frm2.Show();
+            frm2.ShowDialog();
         }
 
         private void stopBtn_Click(object sender, EventArgs e)
@@ -147,7 +147,7 @@ namespace PA5_Gelyana_Vara
         private void snzBtn_Click(object sender, EventArgs e)
         {
             SnoozeForm snzFrm1 = new SnoozeForm();
-            snzFrm1.Show();
+            snzFrm1.ShowDialog();
         }
 
         private void btn_AppointmentBook_Click(object sender, EventArgs e)
