@@ -38,13 +38,16 @@
             this.btn_AppointmentBook = new System.Windows.Forms.Button();
             this.snoozeBtn = new System.Windows.Forms.Button();
             this.imageReminder = new System.Windows.Forms.PictureBox();
+            this.alarmLabel = new System.Windows.Forms.Label();
+            this.ackBtn = new System.Windows.Forms.Button();
+            this.alarmTitle = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.imageReminder)).BeginInit();
             this.SuspendLayout();
             // 
             // currTimeLabel
             // 
-            this.currTimeLabel.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.currTimeLabel.ForeColor = System.Drawing.Color.Transparent;
+            this.currTimeLabel.Font = new System.Drawing.Font("Times New Roman", 22F);
+            this.currTimeLabel.ForeColor = System.Drawing.Color.Black;
             this.currTimeLabel.Location = new System.Drawing.Point(12, 9);
             this.currTimeLabel.Name = "currTimeLabel";
             this.currTimeLabel.Size = new System.Drawing.Size(318, 68);
@@ -53,7 +56,8 @@
             // 
             // alarmBtn
             // 
-            this.alarmBtn.Location = new System.Drawing.Point(18, 222);
+            this.alarmBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.alarmBtn.Location = new System.Drawing.Point(15, 222);
             this.alarmBtn.Name = "alarmBtn";
             this.alarmBtn.Size = new System.Drawing.Size(99, 31);
             this.alarmBtn.TabIndex = 1;
@@ -63,7 +67,8 @@
             // 
             // stopBtn
             // 
-            this.stopBtn.Location = new System.Drawing.Point(18, 251);
+            this.stopBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stopBtn.Location = new System.Drawing.Point(15, 251);
             this.stopBtn.Name = "stopBtn";
             this.stopBtn.Size = new System.Drawing.Size(99, 31);
             this.stopBtn.TabIndex = 2;
@@ -73,7 +78,8 @@
             // 
             // snzBtn
             // 
-            this.snzBtn.Location = new System.Drawing.Point(18, 309);
+            this.snzBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.snzBtn.Location = new System.Drawing.Point(15, 309);
             this.snzBtn.Name = "snzBtn";
             this.snzBtn.Size = new System.Drawing.Size(99, 31);
             this.snzBtn.TabIndex = 3;
@@ -89,10 +95,11 @@
             // 
             // btn_AppointmentBook
             // 
-            this.btn_AppointmentBook.Location = new System.Drawing.Point(193, 97);
+            this.btn_AppointmentBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_AppointmentBook.Location = new System.Drawing.Point(120, 134);
             this.btn_AppointmentBook.Margin = new System.Windows.Forms.Padding(2);
             this.btn_AppointmentBook.Name = "btn_AppointmentBook";
-            this.btn_AppointmentBook.Size = new System.Drawing.Size(111, 27);
+            this.btn_AppointmentBook.Size = new System.Drawing.Size(122, 27);
             this.btn_AppointmentBook.TabIndex = 4;
             this.btn_AppointmentBook.Text = "Appointment Book";
             this.btn_AppointmentBook.UseVisualStyleBackColor = true;
@@ -100,7 +107,8 @@
             // 
             // snoozeBtn
             // 
-            this.snoozeBtn.Location = new System.Drawing.Point(18, 280);
+            this.snoozeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.snoozeBtn.Location = new System.Drawing.Point(15, 280);
             this.snoozeBtn.Name = "snoozeBtn";
             this.snoozeBtn.Size = new System.Drawing.Size(99, 31);
             this.snoozeBtn.TabIndex = 5;
@@ -111,18 +119,54 @@
             // imageReminder
             // 
             this.imageReminder.Image = ((System.Drawing.Image)(resources.GetObject("imageReminder.Image")));
-            this.imageReminder.Location = new System.Drawing.Point(193, 129);
+            this.imageReminder.Location = new System.Drawing.Point(120, 166);
             this.imageReminder.Name = "imageReminder";
-            this.imageReminder.Size = new System.Drawing.Size(179, 211);
+            this.imageReminder.Size = new System.Drawing.Size(122, 145);
             this.imageReminder.TabIndex = 6;
             this.imageReminder.TabStop = false;
+            // 
+            // alarmLabel
+            // 
+            this.alarmLabel.AutoSize = true;
+            this.alarmLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.alarmLabel.Location = new System.Drawing.Point(12, 199);
+            this.alarmLabel.Name = "alarmLabel";
+            this.alarmLabel.Size = new System.Drawing.Size(71, 20);
+            this.alarmLabel.TabIndex = 7;
+            this.alarmLabel.Text = "00:00:00";
+            // 
+            // ackBtn
+            // 
+            this.ackBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ackBtn.Location = new System.Drawing.Point(120, 316);
+            this.ackBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.ackBtn.Name = "ackBtn";
+            this.ackBtn.Size = new System.Drawing.Size(122, 27);
+            this.ackBtn.TabIndex = 8;
+            this.ackBtn.Text = "Acknowledge";
+            this.ackBtn.UseVisualStyleBackColor = true;
+            this.ackBtn.Visible = false;
+            this.ackBtn.Click += new System.EventHandler(this.ackBtn_Click);
+            // 
+            // alarmTitle
+            // 
+            this.alarmTitle.AutoSize = true;
+            this.alarmTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.alarmTitle.Location = new System.Drawing.Point(14, 141);
+            this.alarmTitle.Name = "alarmTitle";
+            this.alarmTitle.Size = new System.Drawing.Size(50, 20);
+            this.alarmTitle.TabIndex = 9;
+            this.alarmTitle.Text = "Alarm";
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(397, 356);
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.ClientSize = new System.Drawing.Size(265, 353);
+            this.Controls.Add(this.alarmTitle);
+            this.Controls.Add(this.ackBtn);
+            this.Controls.Add(this.alarmLabel);
             this.Controls.Add(this.imageReminder);
             this.Controls.Add(this.snoozeBtn);
             this.Controls.Add(this.btn_AppointmentBook);
@@ -130,10 +174,13 @@
             this.Controls.Add(this.stopBtn);
             this.Controls.Add(this.alarmBtn);
             this.Controls.Add(this.currTimeLabel);
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Main";
             this.Text = " ";
             ((System.ComponentModel.ISupportInitialize)(this.imageReminder)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -147,5 +194,8 @@
         private System.Windows.Forms.Button btn_AppointmentBook;
         private System.Windows.Forms.Button snoozeBtn;
         private System.Windows.Forms.PictureBox imageReminder;
+        private System.Windows.Forms.Label alarmLabel;
+        private System.Windows.Forms.Button ackBtn;
+        private System.Windows.Forms.Label alarmTitle;
     }
 }

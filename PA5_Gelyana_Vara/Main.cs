@@ -9,18 +9,26 @@ namespace PA5_Gelyana_Vara
     {
         DateTime currTime = new DateTime();
         DateTime snoozeTime = new DateTime();
-
+        Appointment globalApt = new Appointment();
         SoundPlayer alarmSound = new SoundPlayer(@"C:\Users\Manny\Desktop\Fall 2016\Compe 361\chris.wav");
         
-
+        
         public Main()
         {
             
             InitializeComponent();
-            
-
+            alarmLabel.Visible = false;
+            ackBtn.Visible = false;
         }
 
+
+        bool reminderOn_Off = false;
+
+        public static DateTime alarmTimeDisplay
+        {
+            get;
+            set;
+        }
         public static bool snoozeSet
         {
             get;
@@ -93,8 +101,17 @@ namespace PA5_Gelyana_Vara
         {
             currTimeLabel.Text = DateTime.Now.ToString("M/dd/yyyy hh:mm:ss tt");
             currTime = DateTime.Now;
-
             
+            if(alarmSet)
+            {
+                alarmLabel.Visible = true;
+                alarmLabel.Text = alarmTimeDisplay.ToLongTimeString();
+            }
+            else
+            {
+                alarmLabel.Visible = false;
+
+            }
 
             if ((currTime.Hour == alarmHour) && (currTime.Minute == alarmMin) && (currTime.Second == alarmSec)
               && (currTime.ToString("tt") == alarmAmPm))
@@ -114,14 +131,21 @@ namespace PA5_Gelyana_Vara
 
             }
 
+            if(reminderOn_Off)
+            {
+                imageReminder.Visible = !imageReminder.Visible;
+                ackBtn.Visible = true;
+            }
+
 
             foreach (Appointment apt in Appointment_Book.appointment_Book)
             {
 
                 if (DateTime.Now.ToString("M/dd/yyyy hh:mm:ss tt") == apt.reminderDateTime.ToString("M/dd/yyyy hh:mm:ss tt"))
                 {
+                    reminderOn_Off = true;
                     alarmSound.PlayLooping();
-                    MessageBox.Show(apt.ToString());
+                    globalApt = apt;
                 }
 
             }
@@ -185,6 +209,14 @@ namespace PA5_Gelyana_Vara
             }
            
             
+        }
+
+        private void ackBtn_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(globalApt.ToString());
+            reminderOn_Off = false;
+            imageReminder.Visible = true;
+
         }
     }
 }

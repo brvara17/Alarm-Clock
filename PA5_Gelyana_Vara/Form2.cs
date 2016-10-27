@@ -49,6 +49,7 @@ namespace PA5_Gelyana_Vara
             Main.alarmMin = alarmTime.Minute;
             Main.alarmSec = alarmTime.Second;
             main1.alarmAmPm = alarmTime.ToString("tt");
+            Main.alarmTimeDisplay = alarmTimePick.Value;
             
             
         }
