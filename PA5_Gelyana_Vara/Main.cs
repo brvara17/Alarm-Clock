@@ -10,7 +10,8 @@ namespace PA5_Gelyana_Vara
         DateTime currTime = new DateTime();
         DateTime snoozeTime = new DateTime();
         Appointment globalApt = new Appointment();
-        SoundPlayer alarmSound = new SoundPlayer(@"C:\Users\Manny\Desktop\Fall 2016\Compe 361\chris.wav");
+        SoundPlayer alarmSound = new SoundPlayer(Properties.Resources.force);
+        SoundPlayer reminderSound = new SoundPlayer(Properties.Resources.APPLAUSE);
         
         
         public Main()
@@ -136,6 +137,10 @@ namespace PA5_Gelyana_Vara
                 imageReminder.Visible = !imageReminder.Visible;
                 ackBtn.Visible = true;
             }
+            else
+            {
+                ackBtn.Visible = false;
+            }
 
 
             foreach (Appointment apt in Appointment_Book.appointment_Book)
@@ -144,7 +149,7 @@ namespace PA5_Gelyana_Vara
                 if (DateTime.Now.ToString("M/dd/yyyy hh:mm:ss tt") == apt.reminderDateTime.ToString("M/dd/yyyy hh:mm:ss tt"))
                 {
                     reminderOn_Off = true;
-                    alarmSound.PlayLooping();
+                    reminderSound.PlayLooping();
                     globalApt = apt;
                 }
 
@@ -214,6 +219,7 @@ namespace PA5_Gelyana_Vara
         private void ackBtn_Click(object sender, EventArgs e)
         {
             MessageBox.Show(globalApt.ToString());
+            reminderSound.Stop();
             reminderOn_Off = false;
             imageReminder.Visible = true;
 

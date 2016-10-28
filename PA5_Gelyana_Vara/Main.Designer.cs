@@ -42,8 +42,10 @@
             this.ackBtn = new System.Windows.Forms.Button();
             this.alarmTitle = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.imageReminder)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // currTimeLabel
@@ -59,7 +61,7 @@
             // alarmBtn
             // 
             this.alarmBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.alarmBtn.Location = new System.Drawing.Point(15, 222);
+            this.alarmBtn.Location = new System.Drawing.Point(15, 205);
             this.alarmBtn.Name = "alarmBtn";
             this.alarmBtn.Size = new System.Drawing.Size(99, 31);
             this.alarmBtn.TabIndex = 1;
@@ -70,7 +72,7 @@
             // stopBtn
             // 
             this.stopBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stopBtn.Location = new System.Drawing.Point(15, 251);
+            this.stopBtn.Location = new System.Drawing.Point(15, 234);
             this.stopBtn.Name = "stopBtn";
             this.stopBtn.Size = new System.Drawing.Size(99, 31);
             this.stopBtn.TabIndex = 2;
@@ -81,7 +83,7 @@
             // snzBtn
             // 
             this.snzBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.snzBtn.Location = new System.Drawing.Point(15, 309);
+            this.snzBtn.Location = new System.Drawing.Point(15, 292);
             this.snzBtn.Name = "snzBtn";
             this.snzBtn.Size = new System.Drawing.Size(99, 31);
             this.snzBtn.TabIndex = 3;
@@ -98,7 +100,7 @@
             // btn_AppointmentBook
             // 
             this.btn_AppointmentBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_AppointmentBook.Location = new System.Drawing.Point(120, 134);
+            this.btn_AppointmentBook.Location = new System.Drawing.Point(120, 117);
             this.btn_AppointmentBook.Margin = new System.Windows.Forms.Padding(2);
             this.btn_AppointmentBook.Name = "btn_AppointmentBook";
             this.btn_AppointmentBook.Size = new System.Drawing.Size(122, 27);
@@ -110,7 +112,7 @@
             // snoozeBtn
             // 
             this.snoozeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.snoozeBtn.Location = new System.Drawing.Point(15, 280);
+            this.snoozeBtn.Location = new System.Drawing.Point(15, 263);
             this.snoozeBtn.Name = "snoozeBtn";
             this.snoozeBtn.Size = new System.Drawing.Size(99, 31);
             this.snoozeBtn.TabIndex = 5;
@@ -121,7 +123,7 @@
             // imageReminder
             // 
             this.imageReminder.Image = ((System.Drawing.Image)(resources.GetObject("imageReminder.Image")));
-            this.imageReminder.Location = new System.Drawing.Point(120, 196);
+            this.imageReminder.Location = new System.Drawing.Point(120, 179);
             this.imageReminder.Name = "imageReminder";
             this.imageReminder.Size = new System.Drawing.Size(122, 145);
             this.imageReminder.TabIndex = 6;
@@ -130,17 +132,17 @@
             // alarmLabel
             // 
             this.alarmLabel.AutoSize = true;
-            this.alarmLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.alarmLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
             this.alarmLabel.Location = new System.Drawing.Point(6, 15);
             this.alarmLabel.Name = "alarmLabel";
-            this.alarmLabel.Size = new System.Drawing.Size(71, 20);
+            this.alarmLabel.Size = new System.Drawing.Size(56, 16);
             this.alarmLabel.TabIndex = 7;
             this.alarmLabel.Text = "00:00:00";
             // 
             // ackBtn
             // 
             this.ackBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ackBtn.Location = new System.Drawing.Point(120, 164);
+            this.ackBtn.Location = new System.Drawing.Point(120, 147);
             this.ackBtn.Margin = new System.Windows.Forms.Padding(2);
             this.ackBtn.Name = "ackBtn";
             this.ackBtn.Size = new System.Drawing.Size(122, 27);
@@ -154,7 +156,7 @@
             // 
             this.alarmTitle.AutoSize = true;
             this.alarmTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.alarmTitle.Location = new System.Drawing.Point(13, 136);
+            this.alarmTitle.Location = new System.Drawing.Point(13, 0);
             this.alarmTitle.Name = "alarmTitle";
             this.alarmTitle.Size = new System.Drawing.Size(55, 20);
             this.alarmTitle.TabIndex = 9;
@@ -164,20 +166,29 @@
             // 
             this.groupBox1.Controls.Add(this.alarmLabel);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.groupBox1.Location = new System.Drawing.Point(15, 184);
+            this.groupBox1.Location = new System.Drawing.Point(6, 54);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(89, 35);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Alarm Time:";
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.alarmTitle);
+            this.groupBox2.Controls.Add(this.groupBox1);
+            this.groupBox2.Location = new System.Drawing.Point(9, 113);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(104, 209);
+            this.groupBox2.TabIndex = 11;
+            this.groupBox2.TabStop = false;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.ClientSize = new System.Drawing.Size(265, 353);
-            this.Controls.Add(this.alarmTitle);
+            this.ClientSize = new System.Drawing.Size(265, 339);
             this.Controls.Add(this.ackBtn);
             this.Controls.Add(this.imageReminder);
             this.Controls.Add(this.snoozeBtn);
@@ -186,7 +197,7 @@
             this.Controls.Add(this.stopBtn);
             this.Controls.Add(this.alarmBtn);
             this.Controls.Add(this.currTimeLabel);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBox2);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Main";
@@ -194,8 +205,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.imageReminder)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -213,5 +225,6 @@
         private System.Windows.Forms.Button ackBtn;
         private System.Windows.Forms.Label alarmTitle;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }

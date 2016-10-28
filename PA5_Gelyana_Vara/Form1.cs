@@ -237,12 +237,19 @@ namespace PA5_Gelyana_Vara
         /// <param name="e"></param>
         private void btn_Edit_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Select an Appointment from the List below to Edit:","Edit Appointment");
-            editActive = true;
-            btn_DoneEditing.Visible = true;
-            addApt.Visible = false;
-            cb_Reminder.Checked = false;
+            if (lb_AppointmentBook.Items.Count == 0)
+            {
+                MessageBox.Show("Appointment Book Empty!\nPlease insert an appointment first!", "Error");
 
+            }
+            else
+            {
+                MessageBox.Show("Select an Appointment from the List below to Edit:", "Edit Appointment");
+                editActive = true;
+                btn_DoneEditing.Visible = true;
+                addApt.Visible = false;
+                cb_Reminder.Checked = false;
+            }
         }
 
         /// <summary>
@@ -323,11 +330,18 @@ namespace PA5_Gelyana_Vara
         /// <param name="e"></param>
         private void btn_Delete_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Select an Appointment from the List below to Delete:","Delete Appointment");
-            deleteActive = true;
-            btn_DoneDelete.Visible = true;
-            addApt.Visible = false;
-            cb_Reminder.Checked = false;
+            if (lb_AppointmentBook.Items.Count == 0)
+            {
+                MessageBox.Show("Appointment Book Empty!\nPlease insert an appointment first!", "Error");
+            }
+            else
+            {
+                MessageBox.Show("Select an Appointment from the List below to Delete:", "Delete Appointment");
+                deleteActive = true;
+                btn_DoneDelete.Visible = true;
+                addApt.Visible = false;
+                cb_Reminder.Checked = false;
+            }
         }
 
         /// <summary>
