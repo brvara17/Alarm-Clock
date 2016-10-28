@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Media;
 using System.Windows.Forms;
-using WMPLib;
 
 namespace PA5_Gelyana_Vara
 {
@@ -20,7 +19,7 @@ namespace PA5_Gelyana_Vara
         
         public Main()
         {
-            //
+            
             InitializeComponent();
             alarmLabel.Visible = false;
             ackBtn.Visible = false;
