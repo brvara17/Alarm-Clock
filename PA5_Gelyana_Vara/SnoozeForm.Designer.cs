@@ -41,9 +41,9 @@
             // btn_SetSnooze
             // 
             this.btn_SetSnooze.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_SetSnooze.Location = new System.Drawing.Point(23, 82);
+            this.btn_SetSnooze.Location = new System.Drawing.Point(26, 82);
             this.btn_SetSnooze.Name = "btn_SetSnooze";
-            this.btn_SetSnooze.Size = new System.Drawing.Size(79, 23);
+            this.btn_SetSnooze.Size = new System.Drawing.Size(85, 23);
             this.btn_SetSnooze.TabIndex = 1;
             this.btn_SetSnooze.Text = "Set";
             this.btn_SetSnooze.UseVisualStyleBackColor = true;
@@ -52,9 +52,9 @@
             // closeBtn
             // 
             this.closeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closeBtn.Location = new System.Drawing.Point(108, 82);
+            this.closeBtn.Location = new System.Drawing.Point(111, 82);
             this.closeBtn.Name = "closeBtn";
-            this.closeBtn.Size = new System.Drawing.Size(79, 23);
+            this.closeBtn.Size = new System.Drawing.Size(85, 23);
             this.closeBtn.TabIndex = 2;
             this.closeBtn.Text = "Close";
             this.closeBtn.UseVisualStyleBackColor = true;
@@ -63,9 +63,9 @@
             // hrBox
             // 
             this.hrBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hrBox.Location = new System.Drawing.Point(42, 31);
+            this.hrBox.Location = new System.Drawing.Point(45, 31);
             this.hrBox.Name = "hrBox";
-            this.hrBox.Size = new System.Drawing.Size(39, 26);
+            this.hrBox.Size = new System.Drawing.Size(45, 26);
             this.hrBox.TabIndex = 5;
             this.hrBox.Text = "0";
             this.hrBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.hrBox_KeyPress);
@@ -73,9 +73,9 @@
             // minsBox
             // 
             this.minsBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.minsBox.Location = new System.Drawing.Point(87, 31);
+            this.minsBox.Location = new System.Drawing.Point(90, 31);
             this.minsBox.Name = "minsBox";
-            this.minsBox.Size = new System.Drawing.Size(39, 26);
+            this.minsBox.Size = new System.Drawing.Size(45, 26);
             this.minsBox.TabIndex = 6;
             this.minsBox.Text = "0";
             this.minsBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.minsBox_KeyPress);
@@ -83,9 +83,9 @@
             // secsBox
             // 
             this.secsBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.secsBox.Location = new System.Drawing.Point(132, 31);
+            this.secsBox.Location = new System.Drawing.Point(135, 31);
             this.secsBox.Name = "secsBox";
-            this.secsBox.Size = new System.Drawing.Size(39, 26);
+            this.secsBox.Size = new System.Drawing.Size(45, 26);
             this.secsBox.TabIndex = 7;
             this.secsBox.Text = "0";
             this.secsBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.secsBox_KeyPress);
@@ -93,7 +93,7 @@
             // hrsLabel
             // 
             this.hrsLabel.AutoSize = true;
-            this.hrsLabel.Location = new System.Drawing.Point(39, 18);
+            this.hrsLabel.Location = new System.Drawing.Point(42, 18);
             this.hrsLabel.Name = "hrsLabel";
             this.hrsLabel.Size = new System.Drawing.Size(38, 13);
             this.hrsLabel.TabIndex = 8;
@@ -102,7 +102,7 @@
             // minsLabel
             // 
             this.minsLabel.AutoSize = true;
-            this.minsLabel.Location = new System.Drawing.Point(84, 17);
+            this.minsLabel.Location = new System.Drawing.Point(87, 17);
             this.minsLabel.Name = "minsLabel";
             this.minsLabel.Size = new System.Drawing.Size(32, 13);
             this.minsLabel.TabIndex = 9;
@@ -111,7 +111,7 @@
             // secsLabel
             // 
             this.secsLabel.AutoSize = true;
-            this.secsLabel.Location = new System.Drawing.Point(129, 18);
+            this.secsLabel.Location = new System.Drawing.Point(132, 18);
             this.secsLabel.Name = "secsLabel";
             this.secsLabel.Size = new System.Drawing.Size(34, 13);
             this.secsLabel.TabIndex = 10;
@@ -121,7 +121,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(219, 138);
+            this.ClientSize = new System.Drawing.Size(232, 138);
             this.Controls.Add(this.secsLabel);
             this.Controls.Add(this.minsLabel);
             this.Controls.Add(this.hrsLabel);

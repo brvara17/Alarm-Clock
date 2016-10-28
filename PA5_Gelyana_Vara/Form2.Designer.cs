@@ -36,9 +36,9 @@
             // 
             // setBtn
             // 
-            this.setBtn.Location = new System.Drawing.Point(28, 71);
+            this.setBtn.Location = new System.Drawing.Point(26, 71);
             this.setBtn.Name = "setBtn";
-            this.setBtn.Size = new System.Drawing.Size(63, 23);
+            this.setBtn.Size = new System.Drawing.Size(75, 25);
             this.setBtn.TabIndex = 1;
             this.setBtn.Text = "Set";
             this.setBtn.UseVisualStyleBackColor = true;
@@ -51,14 +51,14 @@
             this.alarmTimePick.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.alarmTimePick.Location = new System.Drawing.Point(26, 21);
             this.alarmTimePick.Name = "alarmTimePick";
-            this.alarmTimePick.Size = new System.Drawing.Size(144, 31);
+            this.alarmTimePick.Size = new System.Drawing.Size(156, 31);
             this.alarmTimePick.TabIndex = 9;
             // 
             // closeBtn
             // 
-            this.closeBtn.Location = new System.Drawing.Point(97, 71);
+            this.closeBtn.Location = new System.Drawing.Point(107, 71);
             this.closeBtn.Name = "closeBtn";
-            this.closeBtn.Size = new System.Drawing.Size(63, 23);
+            this.closeBtn.Size = new System.Drawing.Size(75, 25);
             this.closeBtn.TabIndex = 11;
             this.closeBtn.Text = "Close";
             this.closeBtn.UseVisualStyleBackColor = true;
@@ -68,10 +68,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(197, 132);
+            this.ClientSize = new System.Drawing.Size(221, 127);
             this.Controls.Add(this.closeBtn);
             this.Controls.Add(this.alarmTimePick);
             this.Controls.Add(this.setBtn);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form2";
             this.Text = "Set Alarm";
