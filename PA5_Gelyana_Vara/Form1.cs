@@ -55,8 +55,10 @@ namespace PA5_Gelyana_Vara
             int addAppt = 0;
             Appointment newApt = new Appointment();
 
+            //Gets data from Appointment date and time fields
             string apptDateTime = dateTimePicker_DateAppt.Text + " " + dateTimePicker_TimeAppt.Text;
 
+            //Makes sure the date and time is valid from user.
             if(!DateTime.TryParse(apptDateTime, out newApt.myDateTime))
             {
                 MessageBox.Show("Error! Please Enter a new appointment Date and Time.");
@@ -68,12 +70,13 @@ namespace PA5_Gelyana_Vara
                 addAppt = 1;
             }
 
+            //Gets data from Reminder date and time fields
             string reminderDateTime = dateTimePicker_ReminderDate.Text + " " + dateTimePicker_ReminderTime.Text;
 
+            //If the Reminder checkbox is active add the reminder data to the appointment
             if (cb_Reminder.Checked)
             {
                 
-
                 if (!(DateTime.TryParse(reminderDateTime, out newApt.reminderDateTime)))
                 {
                     MessageBox.Show("Error in reminder");
@@ -88,11 +91,8 @@ namespace PA5_Gelyana_Vara
             }
           
 
-
+            //Displays the appointment to be added to the user.
             MessageBox.Show("Appointment added for:\n"+ newApt.ToString(),"New Appointment");
-            
-           
-            Console.WriteLine(newApt.ToString());
 
             if(addAppt == 1)
             {
@@ -277,9 +277,11 @@ namespace PA5_Gelyana_Vara
         {
             int addAppt = 0;
         Appointment newApt = new Appointment();
+        
+            //Collects data from the date and time fields for edited appointment
+            string apptDateTime = dateTimePicker_DateAppt.Text + " " + dateTimePicker_TimeAppt.Text;
 
-        string apptDateTime = dateTimePicker_DateAppt.Text + " " + dateTimePicker_TimeAppt.Text;
-
+            //Makes sure the data can be added into Date and Time form
             if(!DateTime.TryParse(apptDateTime, out newApt.myDateTime))
             {
                 MessageBox.Show("Error! Please Enter a new appointment Date and Time.","Error");
@@ -291,8 +293,10 @@ namespace PA5_Gelyana_Vara
                 addAppt = 1;
             }
 
+            //Collects data from Reminder date and time fields
             string reminderDateTime = dateTimePicker_ReminderDate.Text + " " + dateTimePicker_ReminderTime.Text;
 
+            //If a reminder is needed adds it to the selected appointment
             if (cb_Reminder.Checked)
             {
                 
@@ -311,7 +315,7 @@ namespace PA5_Gelyana_Vara
             }
           
 
-
+            //Shows the edited appointment information to be added.
             MessageBox.Show("Appointment added for:\n"+ newApt.ToString(),"Edited Appointment");
 
             if(addAppt == 1)
@@ -360,6 +364,11 @@ namespace PA5_Gelyana_Vara
             CleanUpAdd();
         }
 
+        /// <summary>
+        /// Used to view the the appointment information from the listbox.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void lb_AppointmentBook_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             int selectedappt = lb_AppointmentBook.SelectedIndex;
