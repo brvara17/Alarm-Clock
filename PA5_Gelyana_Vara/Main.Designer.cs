@@ -192,6 +192,7 @@
             this.helpBtn.TabIndex = 12;
             this.helpBtn.Text = "Help?";
             this.helpBtn.UseVisualStyleBackColor = false;
+            this.helpBtn.Click += new System.EventHandler(this.helpBtn_Click);
             // 
             // Main
             // 

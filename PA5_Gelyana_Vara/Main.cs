@@ -253,5 +253,12 @@ namespace PA5_Gelyana_Vara
             imageReminder.Visible = true;
 
         }
+
+        private void helpBtn_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Alarm Clock \n - To set the alarm, click on 'Alarm Setting'."
+                + "\n - Then click inside the box and enter your desired alarm time or use the 'UpDown' arrows."
+                + "\n - Click 'Set' once your finished and 'Close' to close the window");
+        }
     }
 }
