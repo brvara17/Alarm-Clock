@@ -12,35 +12,37 @@ namespace PA5_Gelyana_Vara
 {
     public partial class Form2 : Form
     {
+        /// <summary>
+        /// This Form is to allow the user to set the alarm
+        /// </summary>
+        
+        //Property to allow the user to set and get alarmTime
         public DateTime alarmTime
         {
             get;
             set;
         }
         
-       // DateTime alarmTime = new DateTime();
-        Main main1 = new Main();
-        
         public Form2()
         {
-
             InitializeComponent();
-
         }
        
+        //Closes the alarm setting form
         private void closeBtn_Click(object sender, EventArgs e)
-        {
-            
+        {            
             this.Close();
         }
 
+        //This sets the default values and properties for the datetimepicker
         private void Form1_Load(object sender, EventArgs e)
         {
             alarmTimePick.ShowUpDown = true;
             alarmTimePick.Value = DateTime.Now.Date;
         }
 
-      
+        //This allows the user to set the alarm clock internally and 
+        //also set the alarm to display in the main form   
         private void setBtn_Click(object sender, EventArgs e)
         {
             Main.alarmSet = true;
@@ -48,10 +50,8 @@ namespace PA5_Gelyana_Vara
             Main.alarmHour = alarmTime.Hour;
             Main.alarmMin = alarmTime.Minute;
             Main.alarmSec = alarmTime.Second;
-            main1.alarmAmPm = alarmTime.ToString("tt");
+            Main.alarmAmPm = alarmTime.ToString("tt");
             Main.alarmTimeDisplay = alarmTimePick.Value;
-            
-            
         }
 
     }

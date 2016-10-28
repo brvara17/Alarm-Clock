@@ -73,7 +73,7 @@ namespace PA5_Gelyana_Vara
             set;
         }
 
-        public string alarmAmPm
+        public static string alarmAmPm
         {
             get;
             set;

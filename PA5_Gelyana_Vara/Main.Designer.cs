@@ -43,6 +43,7 @@
             this.alarmTitle = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.helpBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.imageReminder)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -60,7 +61,7 @@
             // alarmBtn
             // 
             this.alarmBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.alarmBtn.Location = new System.Drawing.Point(15, 205);
+            this.alarmBtn.Location = new System.Drawing.Point(15, 189);
             this.alarmBtn.Name = "alarmBtn";
             this.alarmBtn.Size = new System.Drawing.Size(99, 31);
             this.alarmBtn.TabIndex = 1;
@@ -71,7 +72,7 @@
             // stopBtn
             // 
             this.stopBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stopBtn.Location = new System.Drawing.Point(15, 234);
+            this.stopBtn.Location = new System.Drawing.Point(15, 218);
             this.stopBtn.Name = "stopBtn";
             this.stopBtn.Size = new System.Drawing.Size(99, 31);
             this.stopBtn.TabIndex = 2;
@@ -82,7 +83,7 @@
             // snzBtn
             // 
             this.snzBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.snzBtn.Location = new System.Drawing.Point(15, 292);
+            this.snzBtn.Location = new System.Drawing.Point(15, 276);
             this.snzBtn.Name = "snzBtn";
             this.snzBtn.Size = new System.Drawing.Size(99, 31);
             this.snzBtn.TabIndex = 3;
@@ -99,7 +100,7 @@
             // btn_AppointmentBook
             // 
             this.btn_AppointmentBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_AppointmentBook.Location = new System.Drawing.Point(120, 117);
+            this.btn_AppointmentBook.Location = new System.Drawing.Point(120, 101);
             this.btn_AppointmentBook.Margin = new System.Windows.Forms.Padding(2);
             this.btn_AppointmentBook.Name = "btn_AppointmentBook";
             this.btn_AppointmentBook.Size = new System.Drawing.Size(122, 27);
@@ -111,7 +112,7 @@
             // snoozeBtn
             // 
             this.snoozeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.snoozeBtn.Location = new System.Drawing.Point(15, 263);
+            this.snoozeBtn.Location = new System.Drawing.Point(15, 247);
             this.snoozeBtn.Name = "snoozeBtn";
             this.snoozeBtn.Size = new System.Drawing.Size(99, 31);
             this.snoozeBtn.TabIndex = 5;
@@ -122,7 +123,7 @@
             // imageReminder
             // 
             this.imageReminder.Image = ((System.Drawing.Image)(resources.GetObject("imageReminder.Image")));
-            this.imageReminder.Location = new System.Drawing.Point(120, 179);
+            this.imageReminder.Location = new System.Drawing.Point(120, 163);
             this.imageReminder.Name = "imageReminder";
             this.imageReminder.Size = new System.Drawing.Size(122, 143);
             this.imageReminder.TabIndex = 6;
@@ -141,7 +142,7 @@
             // ackBtn
             // 
             this.ackBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ackBtn.Location = new System.Drawing.Point(120, 147);
+            this.ackBtn.Location = new System.Drawing.Point(120, 131);
             this.ackBtn.Margin = new System.Windows.Forms.Padding(2);
             this.ackBtn.Name = "ackBtn";
             this.ackBtn.Size = new System.Drawing.Size(122, 27);
@@ -176,11 +177,21 @@
             // 
             this.groupBox2.Controls.Add(this.alarmTitle);
             this.groupBox2.Controls.Add(this.groupBox1);
-            this.groupBox2.Location = new System.Drawing.Point(9, 113);
+            this.groupBox2.Location = new System.Drawing.Point(9, 97);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(104, 209);
             this.groupBox2.TabIndex = 11;
             this.groupBox2.TabStop = false;
+            // 
+            // helpBtn
+            // 
+            this.helpBtn.BackColor = System.Drawing.Color.Yellow;
+            this.helpBtn.Location = new System.Drawing.Point(9, 313);
+            this.helpBtn.Name = "helpBtn";
+            this.helpBtn.Size = new System.Drawing.Size(43, 24);
+            this.helpBtn.TabIndex = 12;
+            this.helpBtn.Text = "Help?";
+            this.helpBtn.UseVisualStyleBackColor = false;
             // 
             // Main
             // 
@@ -188,6 +199,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(265, 339);
+            this.Controls.Add(this.helpBtn);
             this.Controls.Add(this.ackBtn);
             this.Controls.Add(this.imageReminder);
             this.Controls.Add(this.snoozeBtn);
@@ -225,5 +237,6 @@
         private System.Windows.Forms.Label alarmTitle;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button helpBtn;
     }
 }
