@@ -39,7 +39,6 @@ C:\Users\Manny\Documents\Alarm-Clock\PA5_Gelyana_Vara\obj\Debug\PA5_Gelyana_Vara
 C:\Users\Manny\Documents\Alarm-Clock\PA5_Gelyana_Vara\obj\Debug\PA5_Gelyana_Vara.SnoozeForm.resources
 C:\Users\Projects\OneDrive\Compe 361\Programming Assignments\ProgrammingAssignment5\Alarm-Clock\PA5_Gelyana_Vara\obj\Debug\PA5_Gelyana_Vara.SnoozeForm.resources
 C:\Users\Manny\Documents\GitHub\Alarm-Clock\PA5_Gelyana_Vara\bin\Debug\PA5_Gelyana_Vara.exe.config
-C:\Users\Manny\Documents\GitHub\Alarm-Clock\PA5_Gelyana_Vara\obj\Debug\Interop.WMPLib.dll
 C:\Users\Manny\Documents\GitHub\Alarm-Clock\PA5_Gelyana_Vara\obj\Debug\PA5_Gelyana_Vara.csproj.ResolveComReference.cache
 C:\Users\Manny\Documents\GitHub\Alarm-Clock\PA5_Gelyana_Vara\obj\Debug\PA5_Gelyana_Vara.exe
 C:\Users\Manny\Documents\GitHub\Alarm-Clock\PA5_Gelyana_Vara\obj\Debug\PA5_Gelyana_Vara.pdb
