@@ -25,6 +25,7 @@ namespace PA5_Gelyana_Vara
 
         bool reminderOn_Off = false;
 
+        // Main properties to set and get values
         public static DateTime alarmTimeDisplay
         {
             get;
@@ -88,6 +89,8 @@ namespace PA5_Gelyana_Vara
             set;
         }
 
+        //This function sets the adds the Snooze Interval that is entered in by the user to the
+        //SnoozeTime
         public void Snooze()
         {
             snoozeTime = DateTime.Now;
@@ -97,12 +100,19 @@ namespace PA5_Gelyana_Vara
 
         }
 
-        
+        /// <summary>
+        /// Timeer that fires off every 500ms to check and see if any of our conditions are met that satisfy
+        /// the Alarm or the Appointment Book.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void clockTimer_Tick(object sender, EventArgs e)
         {
+            //Clock display on main form to display the current time of day
             currTimeLabel.Text = DateTime.Now.ToString("M/dd/yyyy hh:mm:ss tt");
             currTime = DateTime.Now;
             
+            //If alarm is set, it will allow the user to view the alarm time
             if(alarmSet)
             {
                 alarmLabel.Visible = true;
@@ -114,16 +124,15 @@ namespace PA5_Gelyana_Vara
 
             }
 
+            //Conditions to check and see if the alarm time has met the current time. Sounds the alarm if its true
             if ((currTime.Hour == alarmHour) && (currTime.Minute == alarmMin) && (currTime.Second == alarmSec)
               && (currTime.ToString("tt") == alarmAmPm))
             {
                 alarmWentOff = true;
-               alarmSound.PlayLooping();
-                
-               
+                alarmSound.PlayLooping();
             }
 
-
+            //This checks to see if the Snooze Interval has been met, if so it plays the sound
             if (currTime.Hour == snoozeTime.Hour && currTime.Minute == snoozeTime.Minute && currTime.Second == snoozeTime.Second)
             {                
                 alarmSound.PlayLooping();
@@ -132,6 +141,7 @@ namespace PA5_Gelyana_Vara
 
             }
 
+            //If the Appointment reminder time has been met, flash the image
             if(reminderOn_Off)
             {
                 imageReminder.Visible = !imageReminder.Visible;
@@ -142,7 +152,8 @@ namespace PA5_Gelyana_Vara
                 ackBtn.Visible = false;
             }
 
-
+            //Iterates through each appointment in the appt book to check and see if any appointment times match
+            //the current time, if so play the reminder sound
             foreach (Appointment apt in Appointment_Book.appointment_Book)
             {
 
@@ -157,7 +168,7 @@ namespace PA5_Gelyana_Vara
 
         }
         
-    
+        //Opens alarm setting Form
         private void alarmBtn_Click(object sender, EventArgs e)
         {
             
@@ -165,6 +176,7 @@ namespace PA5_Gelyana_Vara
             frm2.ShowDialog();
         }
 
+        //Stops the alarm sound 
         private void stopBtn_Click(object sender, EventArgs e)
         {
             
@@ -173,18 +185,22 @@ namespace PA5_Gelyana_Vara
             
         }
 
+        //Opens the Snooze Setting form
         private void snzBtn_Click(object sender, EventArgs e)
         {
             SnoozeForm snzFrm1 = new SnoozeForm();
             snzFrm1.ShowDialog();
         }
 
+        //Opens the Appointment book form
         private void btn_AppointmentBook_Click(object sender, EventArgs e)
         {
             Appointment_Book form1 = new Appointment_Book();
             form1.Show();
         }
 
+        //Adds extra time, defined by user, to sound the alarm at a later time 
+        //and also checks to make sure all settings are set before proceeding
         private void snoozeBtn_Click(object sender, EventArgs e)
         {
             alarmSound.Stop();
@@ -216,6 +232,8 @@ namespace PA5_Gelyana_Vara
             
         }
 
+        //This button becomes visible when the appointment reminder has been met and
+        //allows the user to stop the reminder and sound
         private void ackBtn_Click(object sender, EventArgs e)
         {
             MessageBox.Show(globalApt.ToString());
