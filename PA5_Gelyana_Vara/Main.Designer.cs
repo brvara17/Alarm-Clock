@@ -56,7 +56,6 @@
             this.currTimeLabel.Name = "currTimeLabel";
             this.currTimeLabel.Size = new System.Drawing.Size(241, 68);
             this.currTimeLabel.TabIndex = 0;
-            this.currTimeLabel.Text = "label1";
             // 
             // alarmBtn
             // 
@@ -125,7 +124,7 @@
             this.imageReminder.Image = ((System.Drawing.Image)(resources.GetObject("imageReminder.Image")));
             this.imageReminder.Location = new System.Drawing.Point(120, 179);
             this.imageReminder.Name = "imageReminder";
-            this.imageReminder.Size = new System.Drawing.Size(122, 145);
+            this.imageReminder.Size = new System.Drawing.Size(122, 143);
             this.imageReminder.TabIndex = 6;
             this.imageReminder.TabStop = false;
             // 

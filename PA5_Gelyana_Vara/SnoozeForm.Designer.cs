@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SnoozeForm));
             this.btn_SetSnooze = new System.Windows.Forms.Button();
             this.closeBtn = new System.Windows.Forms.Button();
             this.hrBox = new System.Windows.Forms.TextBox();
@@ -131,6 +132,7 @@
             this.Controls.Add(this.closeBtn);
             this.Controls.Add(this.btn_SetSnooze);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SnoozeForm";
             this.Text = "Set Snooze";
             this.ResumeLayout(false);
