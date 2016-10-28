@@ -7,6 +7,10 @@ namespace PA5_Gelyana_Vara
 {
     public partial class Main : Form
     {
+        /// <summary>
+        /// This Main window form is the main window that the user will see when program is first
+        /// loaded. It displays all Alarm Clock options and Appointment Book options.
+        /// </summary>
         DateTime currTime = new DateTime();
         DateTime snoozeTime = new DateTime();
         Appointment globalApt = new Appointment();
@@ -16,16 +20,19 @@ namespace PA5_Gelyana_Vara
         
         public Main()
         {
-            
+            //
             InitializeComponent();
             alarmLabel.Visible = false;
             ackBtn.Visible = false;
+
         }
 
-
+        //Check to see if a reminder event has fired
         bool reminderOn_Off = false;
 
-        // Main properties to set and get values
+        /// <summary>
+        /// These are all properties that allow the program to set and get from any Form.
+        /// </summary>
         public static DateTime alarmTimeDisplay
         {
             get;
@@ -199,8 +206,12 @@ namespace PA5_Gelyana_Vara
             form1.Show();
         }
 
-        //Adds extra time, defined by user, to sound the alarm at a later time 
-        //and also checks to make sure all settings are set before proceeding
+        /// <summary>
+        /// Adds extra time, defined by user, to sound the alarm at a later time
+        ///  and also checks to make sure all settings are set before proceeding
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void snoozeBtn_Click(object sender, EventArgs e)
         {
             alarmSound.Stop();
