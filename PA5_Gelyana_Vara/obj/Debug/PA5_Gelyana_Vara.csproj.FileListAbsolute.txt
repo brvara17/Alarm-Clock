@@ -12,7 +12,6 @@ C:\Users\Manny\documents\visual studio 2015\Projects\PA5_Gelyana_Vara\PA5_Gelyan
 C:\Users\Manny\documents\visual studio 2015\Projects\PA5_Gelyana_Vara\PA5_Gelyana_Vara\obj\Debug\PA5_Gelyana_Vara.Appointment_Book.resources
 C:\Users\Manny\documents\visual studio 2015\Projects\PA5_Gelyana_Vara\PA5_Gelyana_Vara\obj\Debug\PA5_Gelyana_Vara.Form2.resources
 C:\Users\Projects\OneDrive\Compe 361\Programming Assignments\ProgrammingAssignment5\Alarm-Clock\PA5_Gelyana_Vara\bin\Debug\PA5_Gelyana_Vara.exe.config
-C:\Users\Projects\OneDrive\Compe 361\Programming Assignments\ProgrammingAssignment5\Alarm-Clock\PA5_Gelyana_Vara\obj\Debug\Interop.WMPLib.dll
 C:\Users\Projects\OneDrive\Compe 361\Programming Assignments\ProgrammingAssignment5\Alarm-Clock\PA5_Gelyana_Vara\obj\Debug\PA5_Gelyana_Vara.csproj.ResolveComReference.cache
 C:\Users\Projects\OneDrive\Compe 361\Programming Assignments\ProgrammingAssignment5\Alarm-Clock\PA5_Gelyana_Vara\obj\Debug\PA5_Gelyana_Vara.exe
 C:\Users\Projects\OneDrive\Compe 361\Programming Assignments\ProgrammingAssignment5\Alarm-Clock\PA5_Gelyana_Vara\obj\Debug\PA5_Gelyana_Vara.pdb

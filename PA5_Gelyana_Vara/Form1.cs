@@ -30,7 +30,7 @@ namespace PA5_Gelyana_Vara
             foreach (Appointment apt in appointment_Book)
             {
 
-                lb_AppointmentBook.Items.Add(apt.ToString());
+                lb_AppointmentBook.Items.Add(apt.ToStringShort());
             }     
             lb_AppointmentBook.EndUpdate();
         }
@@ -138,7 +138,7 @@ namespace PA5_Gelyana_Vara
             lb_AppointmentBook.Items.Clear();
             foreach (Appointment apt in appointment_Book)
             {
-                lb_AppointmentBook.Items.Add(apt.ToString());
+                lb_AppointmentBook.Items.Add(apt.ToStringShort());
             }
             lb_AppointmentBook.EndUpdate();
         }
@@ -224,7 +224,7 @@ namespace PA5_Gelyana_Vara
             lb_AppointmentBook.Items.Clear();
             foreach (Appointment apt in appointment_Book)
             {
-                lb_AppointmentBook.Items.Add(apt.ToString());
+                lb_AppointmentBook.Items.Add(apt.ToStringShort());
             }
             lb_AppointmentBook.EndUpdate();
         }

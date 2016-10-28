@@ -262,7 +262,15 @@ namespace PA5_Gelyana_Vara
                 + "\n\nAlarm Goes Off: \n - When the alarm goes off, click 'Stop Alarm' to stop or "
                 + "click 'Snooze' to delay the alarm by the Snooze Interval you set. You can click snooze"
                 + "as many times as you want. \n - To stop the alarm, click 'Stop' which will also disable"
-                + "the snooze from working until you enter another alarm time", "Help");
+                + "the snooze from working until you enter another alarm time"
+                + "\n\nAppointment Book:\n\nAdd Appointment - Enter desired appointment time, notes, and reminder time in the"
+                + " appropriate fields. Then click the add button.\n\n" 
+                + "Edit Appointment - Click on the edit button to put the appointment book into"
+                + " edit mode. Select the desired appointment to edit and then edit the data in the set appointment section. "
+                + "To finish editing the appointment hit the 'Done Editing' button."
+                + "\n\nDelete Appointment - To delete an appointment click the delete button which will put the application into"
+                + " the delete mode. Once in delete mode select the desired appointment to delete and then click"
+                + " the 'Delete' button in the set appointment section.","Help");
         }
     }
 }

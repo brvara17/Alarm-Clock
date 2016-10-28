@@ -77,6 +77,24 @@ namespace PA5_Gelyana_Vara
 
             return printview;
         }
+
+        /// <summary>
+        /// Used to output the Values of an Appointment in a presentable format for the listbox.
+        /// </summary>
+        /// <returns></returns>
+        public string ToStringShort()
+        {
+            string printview;
+
+                printview = myDateTime.ToString();
+
+            if (reminder)
+            {
+                printview += "\n\n Reminder on:\n" + reminderDateTime.ToString();
+            }
+
+            return printview;
+        }
     }
 
     /// <summary>
@@ -87,9 +105,5 @@ namespace PA5_Gelyana_Vara
         public static int appointmentSelected;
 
     }
-
-    
-
-
 
 }
