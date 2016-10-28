@@ -167,7 +167,7 @@ namespace PA5_Gelyana_Vara
                 if (DateTime.Now.ToString("M/dd/yyyy hh:mm:ss tt") == apt.reminderDateTime.ToString("M/dd/yyyy hh:mm:ss tt"))
                 {
                     reminderOn_Off = true;
-                    reminderSound.PlayLooping();
+                    reminderSound.Play();
                     globalApt = apt;
                 }
 
@@ -248,7 +248,6 @@ namespace PA5_Gelyana_Vara
         private void ackBtn_Click(object sender, EventArgs e)
         {
             MessageBox.Show(globalApt.ToString());
-            reminderSound.Stop();
             reminderOn_Off = false;
             imageReminder.Visible = true;
 
@@ -256,9 +255,15 @@ namespace PA5_Gelyana_Vara
 
         private void helpBtn_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Alarm Clock \n - To set the alarm, click on 'Alarm Setting'."
-                + "\n - Then click inside the box and enter your desired alarm time or use the 'UpDown' arrows."
-                + "\n - Click 'Set' once your finished and 'Close' to close the window");
+            MessageBox.Show("Alarm Clock: \n - To set the alarm, click on 'Alarm Setting'."
+                + "\n - Then click inside the alarm box and enter your desired alarm time or use the 'UpDown' arrows."
+                + "\n - Click 'Set' once your finished and 'Close' to close the window" 
+                + "\n\nSnooze Setting: \n - To set the Snooze, click on 'Snooze Setting'."
+                + "\n - Enter in your desired values in the boxes and click 'Set'."
+                + "\n\nAlarm Goes Off: \n - When the alarm goes off, click 'Stop Alarm' to stop or "
+                + "click 'Snooze' to delay the alarm by the Snooze Interval you set. You can click snooze"
+                + "as many times as you want. \n - To stop the alarm, click 'Stop' which will also disable"
+                + "the snooze from working until you enter another alarm time", "Help");
         }
     }
 }
